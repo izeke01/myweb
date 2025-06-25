@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Editorial Committee - International Journal of Advanced Research in Life, Environmental, Physical & Engineering Sciences</title>
+    <meta name="description" content="Meet the editorial committee of the International Journal of Advanced Research in Life, Environmental, Physical & Engineering Sciences." />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Arimo:400,700" />
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            color: #222;
+            font-size: 20px;
+        }
+        #container { width: 100vw; min-width: 320px; margin: 0; background: #fff; }
+        #header { background: #fff; padding: 20px 0 10px 0; text-align: left; position: relative; display: flex; align-items: center; justify-content: flex-start; }
+        #header-logo { display: inline-block; margin-left: 16px; }
+        #header-logo img { max-width: 100%; height: 80px; }
+        #menu-icon {
+            display: none;
+            font-size: 28px;
+            color: #002147;
+            margin-left: 18px;
+            z-index: 1100;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 4px;
+            padding: 2px 10px;
+            border: none;
+            outline: none;
+        }
+        /* Top nav bar for desktop */
+        #top-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #002147;
+            padding: 0 0 0 20px;
+            height: 56px;
+            width: 100%;
+            justify-content: flex-start;
+        }
+        #top-nav a {
+            padding: 0 18px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #fff;
+            display: inline-block;
+            transition: 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 56px;
+            height: 56px;
+        }
+        #top-nav a:hover, #top-nav .active {
+            background: rgba(14, 126, 140, 0.15);
+            color: #c00;
+        }
+        /* Side nav for mobile */
+        #side-nav {
+            display: none;
+            position: fixed;
+            flex-direction: column;
+            align-items: flex-start;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: #002147;
+            padding-top: 60px;
+            z-index: 1001;
+            transition: 0.3s;
+            visibility: hidden;
+        }
+        #side-nav.open {
+            display: flex;
+            width: 260px;
+            visibility: visible;
+        }
+        #side-nav a {
+            display: block;
+            padding: 12px 32px;
+            font-size: 18px;
+            line-height: normal;
+            height: auto;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            transition: 0.2s;
+        }
+        #side-nav a:hover, #side-nav .active {
+            background: rgba(14, 126, 140, 0.15);
+            color: #c00;
+        }
+        #side-nav .closebtn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 18px;
+            font-size: 36px;
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 900px) {
+            #top-nav {
+                display: none;
+            }
+            #menu-icon {
+                display: inline-block;
+            }
+            #side-nav {
+                display: none;
+            }
+            #side-nav.open {
+                display: flex;
+            }
+            #header-logo {
+                margin-left: 48px;
+            }
+        }
+        .editorial-content {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            padding: 30px 24px 60px 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h2 { color: #12a2af; font-size: 2em; font-family: 'Times New Roman', Times, serif; }
+        .editor-list { list-style: none; padding: 0; margin: 0; }
+        .editor-list li { margin-bottom: 22px; }
+        .chief-editor { font-weight: bold; color: #c00; }
+        .editor-name { font-weight: bold; color: #002147; font-size: 1.1em; }
+        .editor-affil { color: #444; font-size: 1em; }
+        @media (max-width: 700px) {
+            .editorial-content { padding: 10px 2vw; }
+            #header-logo img { height: 50px; }
+        }
+    </style>
+    <script>
+        function openNav() {
+            var nav = document.getElementById("side-nav");
+            nav.classList.add("open");
+            document.getElementById("menu-icon").style.display = "none";
+        }
+        function closeNav() {
+            var nav = document.getElementById("side-nav");
+            nav.classList.remove("open");
+            document.getElementById("menu-icon").style.display = "inline-block";
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <span id="menu-icon" onclick="openNav()">&#9776;</span>
+        <div id="header-logo">
+            <a href="https://ijarers.com/index">
+                <img src="https://ijarers.com/wp-content/uploads/2019/02/European-Journal-of-Advances-in-Engineering-and-Technology-Cover.jpg" alt="Journal Logo" />
+            </a>
+        </div>
+    </div>
+    <nav id="top-nav">
+        <a href="https://ijarers.com/index">Home</a>
+        <a href="https://ijarers.com/archive">Archives</a>
+        <a href="https://ijarers.com/editorial" class="active">Editorial Committee</a>
+        <a href="https://ijarers.com/submissionguidelines">Submission Guidelines</a>
+        <a href="https://ijarers.com/faq">FAQ</a>
+        <a href="https://ijarers.com/contact">Contact</a>
+    </nav>
+    <nav id="side-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="https://ijarers.com/index">Home</a>
+        <a href="https://ijarers.com/archive">Archives</a>
+        <a href="https://ijarers.com/editorial" class="active">Editorial Committee</a>
+        <a href="https://ijarers.com/submissionguidelines">Submission Guidelines</a>
+        <a href="https://ijarers.com/faq">FAQ</a>
+        <a href="https://ijarers.com/contact">Contact</a>
+    </nav>
+    <div class="editorial-content">
+    <h2>Editorial Committee</h2>
+    <ul class="editor-list">
+        <li class="chief-editor">
+            <span class="editor-name">Dr. Rajesh Kumar (Chief Editor)</span><br>
+            <span class="editor-affil">Department of Civil Engineering, Indian Institute of Technology Bombay, Mumbai, India<br>
+            Email: rajesh.kumar@iitb.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Priya Sharma</span><br>
+            <span class="editor-affil">Department of Environmental Science, Indian Institute of Science, Bangalore, India<br>
+            Email: priya.sharma@iisc.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Anil Gupta</span><br>
+            <span class="editor-affil">Department of Physics, Indian Institute of Technology Delhi, New Delhi, India<br>
+            Email: anil.gupta@iitd.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Meera Joshi</span><br>
+            <span class="editor-affil">Department of Biotechnology, Jawaharlal Nehru University, New Delhi, India<br>
+            Email: meera.joshi@jnu.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Sandeep Singh</span><br>
+            <span class="editor-affil">Department of Life Sciences, Banaras Hindu University, Varanasi, India<br>
+            Email: sandeep.singh@bhu.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Kavita Patel</span><br>
+            <span class="editor-affil">Department of Chemistry, Indian Institute of Technology Madras, Chennai, India<br>
+            Email: kavita.patel@iitm.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Arvind Nair</span><br>
+            <span class="editor-affil">Department of Environmental Engineering, Indian Institute of Technology Kharagpur, India<br>
+            Email: arvind.nair@iitkgp.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Sunita Reddy</span><br>
+            <span class="editor-affil">Department of Zoology, University of Delhi, India<br>
+            Email: sunita.reddy@du.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Manoj Desai</span><br>
+            <span class="editor-affil">Department of Materials Science, University of Hyderabad, India<br>
+            Email: manoj.desai@uohyd.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Neha Verma</span><br>
+            <span class="editor-affil">Department of Botany, University of Calcutta, India<br>
+            Email: neha.verma@caluniv.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Muhammad Imran</span><br>
+            <span class="editor-affil">Department of Environmental Sciences, Quaid-i-Azam University, Islamabad, Pakistan<br>
+            Email: imran.muhammad@qau.edu.pk</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Ayesha Siddiqui</span><br>
+            <span class="editor-affil">Department of Chemistry, University of Karachi, Pakistan<br>
+            Email: ayesha.siddiqui@uok.edu.pk</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Rakesh Chandra</span><br>
+            <span class="editor-affil">Department of Geology, Aligarh Muslim University, India<br>
+            Email: rakesh.chandra@amu.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Farhan Ahmed</span><br>
+            <span class="editor-affil">Department of Physics, University of the Punjab, Lahore, Pakistan<br>
+            Email: farhan.ahmed@pu.edu.pk</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Shalini Menon</span><br>
+            <span class="editor-affil">Department of Environmental Science, University of Kerala, India<br>
+            Email: shalini.menon@keralauniversity.ac.in</span>
+        </li>
+        <li>
+            <span class="editor-name">Dr. Sanjay Patel</span><br>
+            <span class="editor-affil">Department of Biotechnology, Savitribai Phule Pune University, India<br>
+            Email: sanjay.patel@unipune.ac.in</span>
+        </li>
+    </ul>
+</div>
+</div>
+<div id="bottom-bar" style="background:#000; color:#fff; text-align:center; padding:10px 0; width:100vw;">
+    © 2025 International Journal of Advanced Research in Life, Environmental, Physical & Engineering Sciences.
+</div>
+</body>
+</html>

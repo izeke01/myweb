@@ -1,37 +1,128 @@
-<!-- Header Logo -->
-<a href="https://ijarers.com/"></a>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-    <link rel="canonical" href="https://ijarers.com/">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Periodical",
-  "name": "IJARERS",
-  "alternateName": "International Journal of Advanced Research in Engineering and Related Sciences",
-  "url": "https://ijarers.com",
-  "keywords": ["IJARERS", "fast publication", "open access engineering","International Journal of Advanced Research in Engineering and Related Sciences"],
-  "description": "Peer-reviewed journal for engineering research.",
-
-  "sameAs": ["https://twitter.com/ijarers"] 
-}
-</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1.0" />
-    <title>Home-International Journal of Advanced Research in Engineering and Related Sciences</title>
-    <meta name="description" content="Welcome to the Advanced Engineering Research Journal. Explore articles, author guidelines, and submission information." />
+    <title>Home - International Journal of Advanced Research in Life, Environmental, Physical & Engineering Sciences</title>
+    <meta name="description" content="Welcome to the International Journal of Advanced Research. Explore research areas, archives, submission guidelines, editorial committee, and more." />
     <link rel="canonical" href="https://ijarers.com/" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Arimo:400,700" />
     <style>
         body { background: #f4f4f4; font-family: 'Roboto Condensed', Arial, sans-serif; margin: 0; color: #222; }
-        #container { width: 960px; margin: 0 auto; background: #fff; }
-        #header { background: #fff; padding: 20px 0; text-align: center; }
-        #header-logo img { max-width: 100%; height: auto; }
-        #below-menu { background: #f9f9f9; padding: 10px 0; }
-        marquee { color: #c00; font-size: 15px; font-weight: bold; }
-        #main { background: #f5f5f5; display: flex; padding: 20px 0; }
+        #container { width: 100vw; min-width: 320px; margin: 0; background: #fff; }
+        #header { background: #fff; padding: 20px 0 10px 0; text-align: left; position: relative; display: flex; align-items: center; justify-content: flex-start; }
+        #header-logo { display: inline-block; margin-left: 16px; }
+        #header-logo img { max-width: 100%; height: 100px; }
+        #menu-icon {
+            display: none;
+            font-size: 28px;
+            color: #002147;
+            margin-left: 18px;
+            z-index: 1100;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 4px;
+            padding: 2px 10px;
+            border: none;
+            outline: none;
+        }
+        /* Top nav bar for desktop */
+        #top-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #002147;
+            padding: 0 0 0 20px;
+            height: 56px;
+            width: 100%;
+            justify-content: flex-start;
+        }
+        #top-nav a {
+            padding: 0 18px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #fff;
+            display: inline-block;
+            transition: 0.2s;
+            font-family: 'Roboto Condensed', Arial, sans-serif;
+            line-height: 56px;
+            height: 56px;
+        }
+        #top-nav a:hover, #top-nav .active {
+            background: rgba(14, 126, 140, 0.15);
+            color: #c00;
+        }
+        /* Side nav for mobile */
+        #side-nav {
+            display: none;
+            position: fixed;
+            flex-direction: column;
+            align-items: flex-start;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: #002147;
+            padding-top: 60px;
+            z-index: 1001;
+            transition: 0.3s;
+            visibility: hidden;
+        }
+        #side-nav.open {
+            display: flex;
+            width: 260px;
+            visibility: visible;
+        }
+        #side-nav a {
+            display: block;
+            padding: 12px 32px;
+            font-size: 18px;
+            line-height: normal;
+            height: auto;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Roboto Condensed', Arial, sans-serif;
+            transition: 0.2s;
+        }
+        #side-nav a:hover, #side-nav .active {
+            background: rgba(14, 126, 140, 0.15);
+            color: #c00;
+        }
+        #side-nav .closebtn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 18px;
+            font-size: 36px;
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 900px) {
+            #top-nav {
+                display: none;
+            }
+            #menu-icon {
+                display: inline-block;
+            }
+            #side-nav {
+                display: none;
+            }
+            #side-nav.open {
+                display: flex;
+            }
+            #header-logo {
+                margin-left: 48px;
+            }
+        }
+        #main { background: #f5f5f5; display: flex; padding-right: 120px;padding-left: 120px; max-width: 1600px; margin: 0 auto;        box-sizing: border-box;}
         #content { width: 68%; padding: 0 20px; }
         #sidebar-left { width: 32%; padding: 0 20px; }
-        .entry-title { color: #12a2af; }
+        .entry-title { color: navy; }
+        .home-highlight { background: #e6f7fa; border-left: 4px solid navy; padding: 12px 18px; margin-bottom: 20px; }
+        .area-list { margin: 0 0 20px 0; padding: 0 0 0 18px; }
+        .area-list li { margin-bottom: 8px; }
+        .area-list li::marker { color: navy; }
+        .area-list strong { color: navy; }
         .widget-sidebar { margin-bottom: 20px; }
         .widget-sidebar a { color: #c00; text-decoration: none; }
         .widget-sidebar a:hover { text-decoration: underline; }
@@ -39,134 +130,137 @@
         #bottom-bar { background: #000; color: #fff; text-align: center; padding: 10px 0; }
         .search-form input[type="search"] { width: 70%; padding: 5px; }
         .search-form .search-submit { background: #c00; color: #fff; border: none; padding: 5px 15px; cursor: pointer; }
-        .search-form .search-submit:hover { background: #12a2af; }
+        .search-form .search-submit:hover { background: navy; }
         .custom-html-widget img { vertical-align: middle; }
-        .home-highlight { background: #e6f7fa; border-left: 4px solid #12a2af; padding: 12px 18px; margin-bottom: 20px; }
-        .article-list { margin: 0 0 20px 0; padding: 0; }
-
-        /* Responsive styles */
+        html, body {
+            width: 100vw;
+            min-width: 320px;
+            overflow-x: hidden;
+        }
+        @media (max-width: 1200px) {
+            #main { max-width: 100vw; }
+        }
         @media (max-width: 1024px) {
-            #container { width: 98%; }
-            #main { flex-direction: column; }
+            #container { width: 100vw; }
+            #main { flex-direction: column;
+padding-right: 120px;padding-left: 120px;        max-width: 100vw; }
             #content, #sidebar-left { width: 100%; padding: 0 10px; }
         }
         @media (max-width: 700px) {
-            #container { width: 100%; }
+            #container { width: 100vw; }
             #header { padding: 10px 0; }
-            #main { padding: 10px 0; }
+            #main { padding-right: 40px;padding-left: 40px; }
             #content, #sidebar-left { padding: 0 5px; }
             .home-highlight { padding: 10px 8px; }
+            #nav-bar a { font-size: 15px; padding: 10px 10px; }
         }
         @media (max-width: 480px) {
-            #container { width: 100%; }
+            #container { width: 100vw; }
             #header-logo img { max-width: 95vw; }
-            #main { padding: 5px 0; }
+            #main { padding-right: 20px;padding-left: 20px; }
             #content, #sidebar-left { padding: 0 2px; }
             .home-highlight { font-size: 15px; }
             .entry-title { font-size: 20px; }
-            marquee { font-size: 13px; }
+            #nav-bar a { font-size: 13px; padding: 8px 4px; }
         }
-        .article-list li { margin-bottom: 10px; }
-        .article-list a { color: #12a2af; text-decoration: none; }
-        .article-list a:hover { text-decoration: underline; }
+         #nav-bar {
+        background: #002147; /* navy blue */
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
     </style>
+    <script>
+        function openNav() {
+            var nav = document.getElementById("side-nav");
+            nav.classList.add("open");
+            document.getElementById("menu-icon").style.display = "none";
+        }
+        function closeNav() {
+            var nav = document.getElementById("side-nav");
+            nav.classList.remove("open");
+            document.getElementById("menu-icon").style.display = "inline-block";
+        }
+    </script>
 </head>
 <body class="custom-background">
 <div id="container">
     <div id="header">
+        <span id="menu-icon" onclick="openNav()">&#9776;</span>
         <div id="header-logo">
-            <a href="https://ijarers.com/"></a>
-                <img src="https://ijarers.com/wp-content/uploads/2019/02/European-Journal-of-Advances-in-Engineering-and-Technology-Cover.jpg" alt="Advanced Engineering Research Journal" />
+            <a href="index.html">
+                <img src="https://ijarers.com/wp-content/uploads/2019/02/European-Journal-of-Advances-in-Engineering-and-Technology-Cover.jpg" alt="Journal Logo" style="height:100px; width:auto;" />
             </a>
         </div>
     </div>
-    <div id="below-menu">
-        <marquee scrollamount="3.5">
-            :: <a href="https://ijarers.com/submission-form/">Submit Your Paper for Vol. 2 Issue 2</a> ::
-            <a href="https://ijarers.com/archive/volume-1-issue-1-2025/index">View the Latest Issue</a>
-        </marquee>
-    </div>
+    <nav id="top-nav">
+        <a href="index" class="active">Home</a>
+        <a href="archive">Archives</a>
+        <a href="editorial">Editorial Committee</a>
+        <a href="submissionguidelines">Submission Guidelines</a>
+        <a href="faq">FAQ</a>
+        <a href="contact">Contact</a>
+    </nav>
+    <nav id="side-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index" class="active">Home</a>
+        <a href="archive">Archives</a>
+        <a href="editorial">Editorial Committee</a>
+        <a href="submissionguidelines">Submission Guidelines</a>
+        <a href="faq">FAQ</a>
+        <a href="contact">Contact</a>
+    </nav>
     <div id="main">
-        <div id="content">
-            <article>
-                <header>
-                    <h1 class="entry-title">Welcome to the Advanced Engineering Research Journal</h1>
-                </header>
-                <div class="entry-content">
-                    <div class="home-highlight">
-                        <strong>International peer-reviewed journal for advances in engineering and technology research.</strong>
-                        <br>
-                        International Journal of Advanced Research in Engineering and Related Sciences (IJARERS) provides a platform for original research in engineering, technology, and related fields. Our mission is to publish high-quality, peer-reviewed articles and facilitate knowledge sharing among researchers worldwide.
-                    </div>
+ <div id="content">
+    <article>
+        <header>
+            <h2 class="entry-title">About the Journal</h2>
+        </header>
+        <div class="entry-content">
+            <div class="home-highlight">
+                <strong>
+                    The International Journal of Advanced Research in Life, Environmental, Physical & Engineering Sciences (IJARERS) is a multidisciplinary, peer-reviewed open access journal dedicated to publishing high-quality original research and review articles. IJARERS provides a global platform for researchers, academicians, and professionals to share innovative findings and foster interdisciplinary collaboration across the fields of life sciences, environmental sciences, physical sciences, and engineering sciences. Our mission is to advance scientific knowledge, promote best practices, and support the academic community by ensuring rapid and transparent dissemination of research.
+                </strong>
+            </div>
+            <h3 style="color:#c00;">Journal Information</h3>
+            <ul class="area-list">
+                <li><strong>Title:</strong> International Journal of Advanced Research in Life, Environmental, Physical & Engineering Sciences (IJARERS)</li>
+                <li><strong>Frequency:</strong> Monthly</li>
+                <li><strong>Publisher:</strong> IJARERS Publications</li>
+                <li><strong>Refereed:</strong> Peer Reviewed</li>
+                <li><strong>Copyright:</strong> IJARERS Publications</li>
+                <li><strong>Starting Year:</strong> 2025</li>
+                <li><strong>Subjects:</strong> Life Sciences, Environmental Sciences, Physical Sciences, Engineering Sciences (including but not limited to Microbiology, Biotechnology, Genetics, Environmental Management, Chemistry, Physics, Civil, Mechanical, Electrical, Computer, and Interdisciplinary Areas)</li>
+                <li><strong>Language:</strong> English</li>
+                <li><strong>Distribution:</strong> Open Access</li>
+                <li><strong>Publication Format:</strong> PDF &amp; HTML (Online)</li>
+                <li><strong>Email:</strong> editor@ijarers.com</li>
+                <li><strong>Contact:</strong> +234-XXXXXXXXXX (WhatsApp support only)</li>
+                <li><strong>Website:</strong> <a href="https://ijarers.com" target="_blank">https://ijarers.com</a></li>
+            </ul>
+            <h3 style="color:#c00;">Areas of Research</h3>
+            <ul class="area-list">
+                <li><strong>Life Sciences</strong>: Microbiology, Biotechnology, Genetics, Molecular Biology, Biochemistry, Botany, Zoology, Ecology, Physiology, Cell Biology</li>
+                <li><strong>Environmental Sciences</strong>: Environmental Management, Pollution Control, Climate Change, Environmental Chemistry, Waste Management, Conservation Biology, Environmental Biotechnology</li>
+                <li><strong>Physical Sciences</strong>: Physics, Chemistry, Astronomy, Geology, Material Science, Nanoscience, Atmospheric Science, Applied Mathematics</li>
+                <li><strong>Engineering Sciences</strong>: Chemical, Civil, Electrical, Mechanical, Computer, Environmental, Renewable Energy, Biomedical, and more</li>
+                <li><strong>Interdisciplinary Areas</strong>: Bioinformatics, Biophysics, Computational Science, Data Science, Systems Biology</li>
+            </ul>
+            
+            <h3 style="color:#c00;">Courses Covered</h3>
+            <p>
+                Our journal supports a wide range of courses including Introduction to Life Sciences, Environmental Impact Assessment, General Microbiology, Principles of Genetics, Molecular Biology Techniques, Environmental Chemistry, Analytical Chemistry, Organic Chemistry, Inorganic Chemistry, General Physics, Thermodynamics, Classical Mechanics, Ecology and Evolution, Plant Physiology, Animal Physiology, Environmental Biotechnology, Waste Management and Recycling, Climate Change Science, Renewable Energy Systems, Geology and Earth Science, Biostatistics, Bioinformatics, Cell Biology, Nanoscience and Nanotechnology, Applied Mathematics for Scientists, and Scientific Research Methods. These courses reflect the multidisciplinary nature of the journal and provide a strong foundation for academic and professional growth in the sciences and engineering.
+            </p>
+                        <div style="height:300px;"></div>
 
-                    <section>
-                        <h2>About the Journal</h2>
-                        <ul>
-                            <li>
-                                <strong>Scope:</strong> IJARERS covers a wide range of disciplines, including:
-                                <ul>
-                                    <li>Engineering: Acoustic, Aeronautical, Aerospace, Agricultural, Architectural, Automobile, Biomedical, Biotechnology, Chemical, Civil, Computer, Electrical, Electronics, Environmental, Food Science and Technology, Genetic, Industrial, Information Technology, Instrumentation and Control, Leather Technology, Marine, Materials Science, Mechanical, Mechatronics, Metallurgical, Mining, Naval Architectural, Nuclear, Ocean, Petroleum, Production Plant, Safety, Software, Telecommunication, Textile, Transportation Engineering.</li>
-                                    <li>Other Fields: Human Geography, Geomorphology, Physical Geography, Biogeography, Humanities, History, Political Science, Commerce, Business, and Management.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Format:</strong> Completely online, international, and peer-reviewed.</li>
-                            <li><strong>Objective:</strong> To disseminate original research and facilitate interdisciplinary collaboration.</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2>Key Features</h2>
-                        <ul>
-                            <li>Premier source for high-quality engineering and technology research.</li>
-                            <li>Focus on innovation, emerging trends, and future directions.</li>
-                            <li>International forum for sharing research data and interdisciplinary ideas.</li>
-                            <li>Fast, fair, and constructive peer review by experts worldwide.</li>
-                            <li>Articles authored by researchers from diverse backgrounds and countries.</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2>Submission Guidelines</h2>
-                        <ul>
-                            <li>Articles must be original and not under consideration elsewhere.</li>
-                            <li>Manuscripts should follow the journal's style and formatting requirements.</li>
-                            <li>All submissions are subject to review and editing.</li>
-                        </ul>
-                    </section>
-                    <h2 style="color:#12a2af;">Journal Archive</h2>
-<ul>
-    <li>
-        <strong>Volume 1</strong>
-        <ul>
-            <li><a href="https://ijarers.com/archive/volume-1-issue-1-2025/index">Issue 1</a></li>
-            <li><a href="https://ijarers.com/archive/volume-1-issue-2-2025/index">Issue 2</a></li>
-            <li><a href="https://ijarers.com/archive/volume-1-issue-3-2025/index">Issue 3</a></li>
-            <li><a href="https://ijarers.com/archive/volume-1-issue-4-2025/index">Issue 4</a></li>
-        </ul>
-    </li>
-    <li>
-        <strong>Volume 2</strong>
-        <ul>
-            <li><a href="https://ijarers.com/archive/volume-2-issue-1-2026/index">Issue 1</a></li>
-            <li><a href="https://ijarers.com/archive/volume-2-issue-2-2026/index">Issue 2</a></li>
-        </ul>
-    </li>
-</ul>
-
-
-                    <h2 style="color:#c00;">For Authors</h2>
-                    <ul>
-                        <li><a href="https://ijarers.com/authorinfo.html">Author Guidelines & Publication Charges</a></li>
-                        <li><a href="https://ijarers.com/Downloads/ijarers-Template.docx">Download Manuscript Template</a></li>
-                        <li><a href="https://ijarers.com/faq.html">Frequently Asked Questions</a></li>
-                    </ul>
-                </div>
-            </article>
         </div>
+    </article>
+</div>
+
         <div id="sidebar-left" class="sidebar">
             <aside>
                 <section class="widget-sidebar widget_search">
-                    <form role="search" method="get" class="search-form" action="https://ijarers.com/">
+                    <form role="search" method="get" class="search-form" action="#">
                         <label>
                             <span class="screen-reader-text">Search for:</span>
                             <input type="search" class="search-field" placeholder="Search …" name="s" />
@@ -178,13 +272,17 @@
                     <div class="custom-html-widget">
                         <span style="color: red;">
                             <img src="https://ijarers.com/wp-content/uploads/2019/02/Arrow1-min.jpg" style="height:12px" />
-                            <a href="https://ijarers.com/"><strong>Home</strong></a><br />
+                            <a href="index"><strong>Home</strong></a><br />
                             <img src="https://ijarers.com/wp-content/uploads/2019/02/Arrow1-min.jpg" style="height:12px" />
-                            <a href="https://ijarers.com/authorinfo"><strong>Author Guidelines</strong></a><br />
+                            <a href="archive"><strong>Archives</strong></a><br />
                             <img src="https://ijarers.com/wp-content/uploads/2019/02/Arrow1-min.jpg" style="height:12px" />
-                            <a href="https://ijarers.com/Downloads/ijarers-Template.docx"><strong>Download Manuscript Template</strong></a><br />
+                            <a href="faq"><strong>FAQ</strong></a><br />
                             <img src="https://ijarers.com/wp-content/uploads/2019/02/Arrow1-min.jpg" style="height:12px" />
-                            <a href="https://ijarers.com/faq.html"><strong>Frequently Asked Questions</strong></a><br />
+                            <a href="editorial"><strong>Editorial Committee</strong></a><br />
+                            <img src="https://ijarers.com/wp-content/uploads/2019/02/Arrow1-min.jpg" style="height:12px" />
+                            <a href="submissionguidelines"><strong>Submission Guidelines</strong></a><br />
+                            <img src="https://ijarers.com/wp-content/uploads/2019/02/Arrow1-min.jpg" style="height:12px" />
+                            <a href="contact"><strong>Contact</strong></a><br />
                         </span>
                         <br />
                     </div>
@@ -236,25 +334,9 @@
             </aside>
         </div>
     </div>
-    <div id="footer">
-        <div class="widget-footer">
-            <span style="color: red;">
-                <a href="https://ijarers.com/copyright-policy/">Copyright Policy</a> |
-                <a href="https://ijarers.com/wp/open-access-policy/">Open Access Policy</a> |
-                <a href="https://ijarers.com/publication-ethics-malpractice/">Ethics & Malpractice Statement</a> |
-                <a href="https://ijarers.com/reason-to-publish/">Why Publish With Us</a> |
-                <a href="https://ijarers.com/disclaimer/">Disclaimer</a> |
-                <a href="https://ijarers.com/submission-form/">Submit Manuscript</a>
-            </span>
-        </div>
-        <div class="widget-footer">
-            <p>
-                <strong><a href="https://plagiarismremovalservices.com/" style="color:red;">Plagiarism Removal Services</a></strong>
-            </p>
-        </div>
-    </div>
+   
     <div id="bottom-bar">
-        <span>© 2025 Advanced Engineering Research Journal. All rights reserved.</span>
+        <span>© 2025 International Journal of Advanced Research. All rights reserved.</span>
     </div>
 </div>
 </body>

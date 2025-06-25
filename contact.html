@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Contact Us - International Journal of Advanced Research in Life, Environmental, Physical & Engineering Sciences (IJARERS)</title>
+    <meta name="description" content="Contact information for the International Journal of Advanced Research in Life, Environmental, Physical & Engineering Sciences (IJARERS)." />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Arimo:400,700" />
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            color: #222;
+            font-size: 16px;
+        }
+        #container { width: 100vw; min-width: 320px; margin: 0; background: #fff; }
+        #header {
+            background: #fff;
+            padding: 20px 0 10px 0;
+            text-align: left;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        #header-logo {
+            display: inline-block;
+            margin-left: 16px;
+        }
+        #header-logo img {
+            max-width: 100%;
+            height: 80px;
+        }
+        #menu-icon {
+            display: none;
+            font-size: 28px;
+            color: #002147;
+            margin-left: 18px;
+            z-index: 1100;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 4px;
+            padding: 2px 10px;
+            border: none;
+            outline: none;
+        }
+        /* Top nav bar for desktop */
+        #top-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #002147;
+            padding: 0 0 0 20px;
+            height: 56px;
+            width: 100%;
+            justify-content: flex-start;
+        }
+        #top-nav a {
+            padding: 0 18px;
+            text-decoration: none;
+            font-size: 19px;
+            color: #fff;
+            display: inline-block;
+            transition: 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 56px;
+            height: 56px;
+        }
+        #top-nav a:hover, #top-nav .active {
+            background: rgba(14, 126, 140, 0.15);
+            color: #c00;
+        }
+        /* Side nav for mobile */
+        #side-nav {
+            display: none;
+            position: fixed;
+            flex-direction: column;
+            align-items: flex-start;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: #002147;
+            padding-top: 60px;
+            z-index: 1001;
+            transition: 0.3s;
+            visibility: hidden;
+        }
+        #side-nav.open {
+            display: flex;
+            width: 260px;
+            visibility: visible;
+        }
+        #side-nav a {
+            display: block;
+            padding: 12px 32px;
+            font-size: 20px;
+            line-height: normal;
+            height: auto;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            transition: 0.2s;
+        }
+        #side-nav a:hover, #side-nav .active {
+            background: rgba(14, 126, 140, 0.15);
+            color: #c00;
+        }
+        #side-nav .closebtn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 18px;
+            font-size: 36px;
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 900px) {
+            #top-nav {
+                display: none;
+            }
+            #menu-icon {
+                display: inline-block;
+            }
+            #side-nav {
+                display: none;
+            }
+            #side-nav.open {
+                display: flex;
+            }
+            #header-logo {
+                margin-left: 48px;
+            }
+        }
+        .contact-content {
+            max-width: 700px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            padding: 32px 28px 60px 28px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h2 { color: #12a2af; font-family: 'Times New Roman', Times, serif; }
+        .contact-info { margin-bottom: 30px; }
+        .contact-info strong { color: #002147; }
+        .contact-form label { display: block; margin-top: 16px; font-weight: bold; }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 8px; margin-top: 4px; font-size: 17px; font-family: 'Times New Roman', Times, serif; border: 1px solid #ccc; border-radius: 4px;
+        }
+        .contact-form textarea { min-height: 100px; }
+        .contact-form button {
+            margin-top: 18px;
+            background: #002147;
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .contact-form button:hover { background: #12a2af; color: #fff; }
+        @media (max-width: 700px) {
+            .contact-content { padding: 10px 2vw; }
+            #header-logo img { height: 50px; }
+        }
+    </style>
+    <script>
+        function openNav() {
+            var nav = document.getElementById("side-nav");
+            nav.classList.add("open");
+            document.getElementById("menu-icon").style.display = "none";
+        }
+        function closeNav() {
+            var nav = document.getElementById("side-nav");
+            nav.classList.remove("open");
+            document.getElementById("menu-icon").style.display = "inline-block";
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <span id="menu-icon" onclick="openNav()">&#9776;</span>
+        <div id="header-logo">
+            <a href="https://ijarers.com/index">
+                <img src="https://ijarers.com/wp-content/uploads/2019/02/European-Journal-of-Advances-in-Engineering-and-Technology-Cover.jpg" alt="Journal Logo" />
+            </a>
+        </div>
+    </div>
+    <nav id="top-nav">
+        <a href="https://ijarers.com/index">Home</a>
+        <a href="https://ijarers.com/archive">Archives</a>
+        <a href="https://ijarers.com/editorial">Editorial Committee</a>
+        <a href="https://ijarers.com/submissionguidelines">Submission Guidelines</a>
+        <a href="https://ijarers.com/faq">FAQ</a>
+        <a href="https://ijarers.com/contact" class="active">Contact</a>
+    </nav>
+    <nav id="side-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="https://ijarers.com/index">Home</a>
+        <a href="https://ijarers.com/archive">Archives</a>
+        <a href="https://ijarers.com/editorial">Editorial Committee</a>
+        <a href="https://ijarers.com/submissionguidelines">Submission Guidelines</a>
+        <a href="https://ijarers.com/faq">FAQ</a>
+        <a href="https://ijarers.com/contact" class="active">Contact</a>
+    </nav>
+    <div class="contact-content">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:editor@ijarers.com">editor@ijarers.com</a>, <a href="mailto:ijarers@gmail.com">ijarers@gmail.com</a></p>
+            <p><strong>WhatsApp Support:</strong> +91-8160745806</p>
+            <p><strong>Website:</strong> <a href="https://ijarers.com" target="_blank">https://ijarers.com</a></p>
+            <p><strong>Publisher:</strong> IJARERS Publications</p>
+            <p><strong>Address:</strong> IJARERS Publications, Mumbai, India</p>
+        </div>
+        <form class="contact-form" action="mailto:editor@ijarers.com" method="POST" enctype="text/plain">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="Name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="Email" required>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p style="margin-top:24px; color:#888; font-size:16px;">
+            For all queries related to submissions, editorial process, or technical support, please contact us via email or WhatsApp. We aim to respond within 2 business days.
+        </p>
+    </div>
+</div>
+<div id="bottom-bar" style="background:#000; color:#fff; text-align:center; padding:10px 0; width:100vw;">
+    © 2025 International Journal of Advanced Research in Life, Environmental, Physical & Engineering Sciences. All rights reserved.
+</div>
+</body>
+</html>
