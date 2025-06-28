@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>International Journal of Advanced Research in Engineering and Related Sciences.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fa;
+            color: #222;
+        }
+        header {
+            background: #23406e;
+            color: #fff;
+            padding: 2.5rem 1rem 1.5rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 0.7rem 0;
+            font-size: 2.2rem;
+            letter-spacing: 0.02em;
+        }
+        header p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0 0 0;
+            color: #cfd8e3;
+        }
+        nav.dashboard {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav.dashboard a {
+            color: #23406e;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav.dashboard a:hover, nav.dashboard a.active {
+            background: #23406e;
+            color: #fff;
+        }
+        main {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            color: #23406e;
+            margin-top: 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .feature-card {
+            background: #f4f7fa;
+            border-radius: 8px;
+            padding: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+        .feature-card h3 {
+            margin: 0.5rem 0 0.7rem 0;
+            color: #23406e;
+            font-size: 1.1rem;
+        }
+        .cta-section {
+            text-align: center;
+            margin: 2.5rem 0 1.5rem 0;
+        }
+        .cta-section a {
+            background: #23406e;
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+        .cta-section a:hover {
+            background: #1a2e4a;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+        }
+        .team-member {
+            background: #f4f7fa;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .team-member img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.7rem;
+        }
+        .team-member h4 {
+            margin: 0.3rem 0 0.2rem 0;
+            color: #23406e;
+            font-size: 1rem;
+        }
+        .team-member p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin-bottom: 1rem;
+            border: 1px solid #cfd8e3;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            background: #23406e;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #1a2e4a;
+        }
+        footer {
+            text-align: center;
+            color: #888;
+            padding: 1.2rem 0;
+            font-size: 1rem;
+            background: #e9eef3;
+            margin-top: 2rem;
+        }
+        @media (max-width: 700px) {
+            main {
+                padding: 1.2rem 0.5rem;
+            }
+            header h1 {
+                font-size: 1.3rem;
+            }
+            nav.dashboard {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        // Highlight active nav link on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('nav.dashboard a');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 80;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>International Journal of Advanced Research in Engineering and Related Sciences.</h1>
+        <p>Promoting excellence in engineering and related sciences research worldwide.</p>
+    </header>
+    <nav class="dashboard">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#news">News</a>
+        <a href="#submit">Submit</a>
+        <a href="#editorial">Editorial Board</a>
+        <a href="#archives">Archives</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About the Journal</h2>
+            <p>
+                The International Journal of Advanced Research in Engineering and Related Sciences is a peer-reviewed open access journal dedicated to publishing high-quality research in all areas of engineering and related scientific disciplines. Our mission is to foster innovation, collaboration, and knowledge dissemination among researchers, academics, and professionals worldwide.
+            </p>
+        </section>
+        <section id="features">
+            <h2>Journal Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Open Access</h3>
+                    <p>All articles are freely available to readers worldwide, ensuring maximum visibility and impact.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Rapid Peer Review</h3>
+                    <p>Efficient and transparent peer review process for timely publication of research.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Global Editorial Board</h3>
+                    <p>Expert editors and reviewers from leading institutions across the globe.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Wide Scope</h3>
+                    <p>Covers all branches of engineering and related sciences, encouraging interdisciplinary research.</p>
+                </div>
+            </div>
+        </section>
+        <section id="news">
+            <h2>Latest News</h2>
+            <ul>
+                <li>Call for Papers: Volume 1, Issue 1 (2025) is now open for submissions.</li>
+                <li>Online submission system launched for authors and reviewers.</li>
+                <li>Congratulations to our newly appointed editorial board members.</li>
+            </ul>
+        </section>
+        <section id="submit" class="cta-section">
+            <h2>Submit Your Manuscript</h2>
+            <p>Ready to publish your research? Submit your manuscript through our online system.</p>
+            <a href="#">Submit Manuscript</a>
+        </section>
+        <section id="editorial">
+            <h2>Editorial Board</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Editor Photo">
+                    <h4>Dr. John Smith</h4>
+                    <p>Editor-in-Chief<br>MIT, USA</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Editor Photo">
+                    <h4>Prof. Maria Garcia</h4>
+                    <p>Associate Editor<br>University of Cambridge, UK</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Editor Photo">
+                    <h4>Dr. Ahmed Khan</h4>
+                    <p>Section Editor<br>IIT Delhi, India</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Editor Photo">
+                    <h4>Dr. Li Wei</h4>
+                    <p>Section Editor<br>Tsinghua University, China</p>
+                </div>
+            </div>
+        </section>
+        <section id="archives">
+            <h2>Archives</h2>
+            <ul>
+                <li><a href="#">Volume 1, Issue 1 (2025)</a></li>
+                <!-- Add more issues as needed -->
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 International Journal of Advanced Research in Engineering and Related Sciences. All rights reserved.
+    </footer>
+</body>
+</html>
