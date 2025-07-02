@@ -32,7 +32,7 @@ ul.past-years li a {
 }
 
 section.list-pastevents {
-    padding: 4% 20px;
+    padding: 4% 0px;
 }
 
 .tesimonial-content {
@@ -130,7 +130,7 @@ html {
 }
 
 ul.align-left li b {
-    color: transparent;
+    color: #2b72b4;
 }
 
 ul.align-left li {
@@ -147,9 +147,233 @@ ul.align-left li {
 /* Remove overlay from about section image */
 .about-us-img:before {
     display: none;
-    color: transparent;
 }
-.about-us-img::after {
-    color: transparent;
-    display: none;
+
+/* Article Display Page Styles */
+.article-display-area {
+    background: #fff;
+}
+
+.article-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.article-header {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 30px;
+}
+
+.article-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.article-meta span {
+    background: #f8f9fa;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3177b9;
+    border: 1px solid #e1e1e1;
+}
+
+.article-title {
+    font-size: 28px;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.authors-section, .abstract-section, .keywords-section, .results-section, .references-section {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 30px;
+}
+
+.section-title h3 {
+    color: #3177b9;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3177b9;
+    display: inline-block;
+}
+
+.author-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3177b9;
+}
+
+.author-item h4 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.author-item p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.abstract-content p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 15px;
+    color: #444;
+}
+
+.keywords-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.keyword-tag {
+    background: linear-gradient(45deg, #3177b9, #428cd4);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.result-image-box {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.result-image-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.result-image-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.image-caption {
+    padding: 15px;
+}
+
+.image-caption h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.image-caption p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.references-list {
+    counter-reset: reference-counter;
+    padding-left: 0;
+}
+
+.references-list li {
+    counter-increment: reference-counter;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #444;
+}
+
+.references-list li::before {
+    content: "[" counter(reference-counter) "]";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 600;
+    color: #3177b9;
+}
+
+.article-actions {
+    padding: 30px 0;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-bg {
+    background: linear-gradient(45deg, #3177b9, #428cd4);
+    color: white;
+    padding: 80px 0;
+}
+
+.slider-contents h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.slider-contents p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 22px;
+    }
+    
+    .article-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .result-image-box img {
+        height: 150px;
+    }
+}
+
+/* Fix for article page button color contrast */
+.article-display-area .c-btn.btn-border {
+    background: #ffffff;
+    border: 2px solid #234969;
+    color: #234969 !important;
+    text-decoration: none;
+}
+
+.article-display-area .c-btn.btn-border:hover {
+    background: #234969;
+    border-color: #234969;
+    color: #ffffff !important;
+}
+
+.article-display-area .c-btn.btn-border i {
+    color: inherit;
 }
