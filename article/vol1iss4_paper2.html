@@ -1,0 +1,415 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Computational Efficiency Optimization in Python: Benchmarking High-Performance Frameworks for Data Science and Machine Learning Workflows - IJARERS</title>
+        <meta name="description" content="In recent years, Python has become the go-to language for data science and machine learning app developers. This study presents a comprehensive benchm...">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google Scholar Meta Tags -->
+        <meta name="citation_title" content="Computational Efficiency Optimization in Python: Benchmarking High-Performance Frameworks for Data Science and Machine Learning Workflows">
+        <meta name="citation_author" content="Priya Kapoor">
+        <meta name="citation_journal_title" content="International Journal of Advanced Research in Engineering and Related Sciences">
+        <meta name="citation_journal_abbrev" content="IJARERS">
+        <meta name="citation_issn" content="2278-909X">
+        <meta name="citation_volume" content="1">
+        <meta name="citation_issue" content="4">
+        <meta name="citation_firstpage" content="2">
+        <meta name="citation_publication_date" content="2025/06/15">
+        <meta name="citation_publisher" content="IJARERS">
+        <meta name="citation_abstract_html_url" content="https://ijarers.com/article/vol1iss4_paper2.html">
+        <meta name="citation_pdf_url" content="https://ijarers.com/IJARERS_ARCHIVE/1i42.pdf">
+        <meta name="citation_language" content="en">
+        <meta name="citation_keywords" content="Python, Data science, Machine Learning">
+        
+        <!-- Dublin Core Meta Tags -->
+        <meta name="DC.Title" content="Computational Efficiency Optimization in Python: Benchmarking High-Performance Frameworks for Data Science and Machine Learning Workflows">
+        <meta name="DC.Creator" content="Priya Kapoor">
+        <meta name="DC.Subject" content="Python, Data science, Machine Learning">
+        <meta name="DC.Description" content="In recent years, Python has become the go-to language for data science and machine learning app developers. This study presents a comprehensive benchm...">
+        <meta name="DC.Publisher" content="International Journal of Advanced Research in Engineering and Related Sciences">
+        <meta name="DC.Date" content="2025-06-15">
+        <meta name="DC.Type" content="Text">
+        <meta name="DC.Format" content="text/html">
+        <meta name="DC.Identifier" content="https://ijarers.com/article/vol1iss4_paper2.html">
+        <meta name="DC.Language" content="en">
+        <meta name="DC.Rights" content="Copyright 2025 IJARERS">
+
+        <!-- Additional SEO Meta Tags -->
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow">
+        <meta name="author" content="Priya Kapoor">
+        <meta property="og:title" content="Computational Efficiency Optimization in Python: Benchmarking High-Performance Frameworks for Data Science and Machine Learning Workflows">
+        <meta property="og:description" content="In recent years, Python has become the go-to language for data science and machine learning app developers. This study presents a comprehensive benchm...">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://ijarers.com/article/vol1iss4_paper2.html">
+        <meta property="article:published_time" content="2025-06-15">
+        <meta property="article:section" content="Research Article">
+
+        <link rel="manifest" href="../site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+		<!-- CSS here -->        
+        <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../assets/css/animate.min.css">
+        <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="../assets/css/themify-icons.css">
+        <link rel="stylesheet" href="../assets/css/meanmenu.css">
+        <link rel="stylesheet" href="../assets/css/slick.css">
+        <link rel="stylesheet" href="../assets/css/default.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/responsive.css">
+         <link rel="stylesheet" href="../assets/css/custom.css">
+
+    </head>
+    <body>
+
+        <!-- header-start -->
+		<header class="header-transparent">
+            <div id="sticky-header" class="main-menu-area menu-bg pr-85">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3 col-4">
+                            <div class="logo logo-bg">
+                                <a href="../index.html"><img src="../assets/img/logo.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6 d-none d-lg-block">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="../index.html">Home</a></li>
+                                        <li><a href="../about-us.html">About Us</a></li>
+                                        <li><a href="../editorial-board.html">Editorial Board</a></li>
+                                        <li><a href="../submit-your-paper.html">Submit Your Paper</a></li>
+                                         <li><a href="../abstract.html">
+                                                Indexing
+                                            </a></li>
+                                        <li class="active"><a href="#">Issues <i class="fas fa-plus"></i></a>
+                                            <ul class="sub-menu text-left">
+                                                <li><a href="../current-issues.html">Current Issue</a></li>
+                                                <li><a href="../past-issues.html">Past Issues</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="../contact-us.html">contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-8">
+                            <div class="header-right f-left">
+                                <a href="mailto:editor@ijarers.com">
+                                    <div class="header-icon mr-15 f-left">
+                                        <i class=""></i>
+                                    </div>
+                                    <div class="header-info">
+                                        <span>Email Us</span>
+                                        <h5>editor@ijarers.com</h5>
+                                    </div>
+                               </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+
+        <main>
+            <!-- hero-area start -->
+            <div style="height:50px; background:#fff;"></div>
+            <!-- hero-area end -->
+
+            <!-- article-display-area start -->
+            <div class="article-display-area pt-80 pb-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="article-content">
+                                <!-- Article Header -->
+                                <div class="article-header mb-40">
+                                    <div class="article-meta mb-20">
+                                        <span class="article-type">Research Article</span>
+                                        <span class="article-date">Published: June 15, 2025</span>
+                                        <span class="article-volume">Volume 1, Issue 4</span>
+                                    </div>
+                                    <h1 class="article-title">Computational Efficiency Optimization in Python: Benchmarking High-Performance Frameworks for Data Science and Machine Learning Workflows</h1>
+                                </div>
+
+                                <!-- Authors and Affiliations -->
+                                <div class="authors-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Authors</h3>
+                                    </div>
+                                    <div class="authors-list">
+                                        <div class="author-item mb-20">
+                                            <h4>Priya Kapoor*<sup>1</sup></h4>
+                                            <p><strong>Affiliation:</strong> School of Computing, National University of Singapore, Singapore</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Abstract Section -->
+                                <div class="abstract-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Abstract</h3>
+                                    </div>
+                                    <div class="abstract-content">
+                                        <p>In recent years, Python has become the go-to language for data science and machine learning app developers. It is important to note, however, that data scientists are not always programming experts. In spite of the fact that Python enables them to rapidly develop their algorithms, when they are operating at scale, the need for efficient computation becomes unavoidable. Thus, optimizing high-performance hardware, such as graphics processing units and multi-core processors, to achieve their maximum potential is no simple feat.</p>
+                                        
+                                        <p>It is possible to consider the current narrative survey to be a reference document for practitioners of the Python language, which will assist them in navigating the vast array of tools and approaches that are accessible for use with the Python programming language. The user scenarios that are the focus of our document are designed to cover the majority of the possible circumstances that users may encounter. Tool developers may also find this document useful; by reading it, they will be able to see where our work could be lacking in current tools and be more motivated to fill such gaps. We feel that this information may be of service to tool developers.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Keywords Section -->
+                                <div class="keywords-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Keywords</h3>
+                                    </div>
+                                    <div class="keywords-content">
+                                        <span class="keyword-tag">Python</span>
+                                        <span class="keyword-tag">Data science</span>
+                                        <span class="keyword-tag">Machine Learning</span>
+                                    </div>
+                                </div>
+
+                                <!-- Downloads Section -->
+                                <div class="downloads-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Downloads</h3>
+                                    </div>
+                                    <div class="downloads-content">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
+                                                <div class="download-item">
+                                                    <a href="../IJARERS_ARCHIVE/1i42.pdf" target="_blank" class="btn btn-primary">
+                                                        <i class="fas fa-download"></i> Download Full Paper (PDF)
+                                                    </a>
+                                                    <div class="download-description mt-20">
+                                                        <h4>Full Research Paper</h4>
+                                                        <p>Complete research article with detailed methodology, results, and references.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Citation Section -->
+                                <div class="citation-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>How to Cite</h3>
+                                    </div>
+                                    <div class="references-content">
+                                        <div class="citation-box p-20" style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+                                            <div class="citation-item mb-20">
+                                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                                    <p class="mb-0"><strong>APA Style:</strong></p>
+                                                    <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCitation('apa-citation')" title="Copy APA Citation">
+                                                        <i class="fas fa-copy"></i> Copy
+                                                    </button>
+                                                </div>
+                                            <p id="apa-citation" class="citation-text">Kapoor, P. (2025). Computational Efficiency Optimization in Python: Benchmarking High-Performance Frameworks for Data Science and Machine Learning Workflows. <em>International Journal of Advanced Research in Engineering and Related Sciences</em>, <em>1</em>(4), 2.</p>
+                                            
+                                            <div class="citation-item">
+                                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                                    <p class="mb-0"><strong>IEEE Style:</strong></p>
+                                                    <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCitation('ieee-citation')" title="Copy IEEE Citation">
+                                                        <i class="fas fa-copy"></i> Copy
+                                                    </button>
+                                                </div>
+                                                <p id="ieee-citation" class="citation-text">P. Kapoor, "Computational Efficiency Optimization in Python: Benchmarking High-Performance Frameworks for Data Science and Machine Learning Workflows," <em>International Journal of Advanced Research in Engineering and Related Sciences</em>, vol. 1, no. 4, paper 2, 2025.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- References Section -->
+                                <div class="references-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>References</h3>
+                                    </div>
+                                    <div class="references-content">
+                                        <ol class="references-list">
+                                            <li>Van Rossum, G., & Drake, F. L. (2009). <em>Python 3 Reference Manual</em>. CreateSpace.</li>
+                                            <li>McKinney, W. (2010). Data structures for statistical computing in Python. <em>Proceedings of the 9th Python in Science Conference</em>, 51-56.</li>
+                                            <li>Harris, C. R., Millman, K. J., van der Walt, S. J., et al. (2020). Array programming with NumPy. <em>Nature</em>, 585(7825), 357-362.</li>
+                                            <li>Abadi, M., Agarwal, A., Barham, P., et al. (2016). TensorFlow: Large-scale machine learning on heterogeneous systems. <em>arXiv preprint arXiv:1603.04467</em>.</li>
+                                            <li>Pedregosa, F., Varoquaux, G., Gramfort, A., et al. (2011). Scikit-learn: Machine learning in Python. <em>Journal of Machine Learning Research</em>, 12, 2825-2830.</li>
+                                            <li>Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. <em>Computing in Science & Engineering</em>, 9(3), 90-95.</li>
+                                            <li>Kluyver, T., Ragan-Kelley, B., Pérez, F., et al. (2016). Jupyter Notebooks-a publishing format for reproducible computational workflows. <em>Positioning and Power in Academic Publishing: Players, Agents and Agendas</em>, 87-90.</li>
+                                            <li>Lam, S. K., Pitrou, A., & Seibert, S. (2015). Numba: A LLVM-based Python JIT compiler. <em>Proceedings of the Second Workshop on the LLVM Compiler Infrastructure in HPC</em>, 1-6.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- article-display-area end -->
+        </main>
+
+        <!-- footer-area-start -->
+        <footer>
+            <div class="footer-top-area black-bg pt-40">
+                <div class="container">
+                    <div class="footer-middle-area mt-30 pb-30 pt-60">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">About IJARERS</h3>
+                                    <div class="footer-text">
+                                        <p>International Journal of Advanced Research in Engineering and Related Sciences (IJARERS) is a peer-reviewed open access journal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Quick Links</h3>
+                                    <div class="footer-text">
+                                        <ul>
+                                            <li><a href="../about-us.html">About Us</a></li>
+                                            <li><a href="../editorial-board.html">Editorial Board</a></li>
+                                            <li><a href="../submit-your-paper.html">Submit Paper</a></li>
+                                            <li><a href="../contact-us.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Issues</h3>
+                                    <div class="footer-text">
+                                        <ul>
+                                            <li><a href="../current-issues.html">Current Issues</a></li>
+                                            <li><a href="../past-issues.html">Past Issues</a></li>
+                                            <li><a href="../issues/vol1iss4.html">Volume 1, Issue 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Contact Info</h3>
+                                    <div class="footer-text">
+                                        <p>Email: editor@ijarers.com</p>
+                                        <p>Website: ijarers.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-area black-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="footer-bottom-content text-center">
+                                <p>&copy; 2025 IJARERS. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-area-end -->
+
+        <!-- JS here -->
+        <script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/owl.carousel.min.js"></script>
+        <script src="../assets/js/slick.min.js"></script>
+        <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="../assets/js/waypoints.min.js"></script>
+        <script src="../assets/js/jquery.counterup.min.js"></script>
+        <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="../assets/js/isotope.pkgd.min.js"></script>
+        <script src="../assets/js/jquery.appear.js"></script>
+        <script src="../assets/js/jquery.knob.js"></script>
+        <script src="../assets/js/wow.min.js"></script>
+        <script src="../assets/js/ajax-form.js"></script>
+        <script src="../assets/js/jquery.scrollUp.min.js"></script>
+        <script src="../assets/js/jquery.meanmenu.min.js"></script>
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+        <!-- Citation Copy Functionality -->
+        <style>
+            .copy-btn {
+                font-size: 12px;
+                padding: 4px 8px;
+                border-radius: 3px;
+            }
+            .copy-btn:hover {
+                background-color: #007bff;
+                color: white;
+            }
+            .citation-text {
+                background: white;
+                padding: 10px;
+                border-radius: 3px;
+                border: 1px solid #e9ecef;
+                margin: 0;
+            }
+            .copy-success {
+                background-color: #28a745 !important;
+                color: white !important;
+            }
+        </style>
+        
+        <script>
+            function copyCitation(elementId) {
+                const citationElement = document.getElementById(elementId);
+                const button = event.target.closest('.copy-btn');
+                
+                // Get text content without HTML tags
+                const textToCopy = citationElement.textContent || citationElement.innerText;
+                
+                // Copy to clipboard
+                navigator.clipboard.writeText(textToCopy).then(function() {
+                    // Show success feedback
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    button.classList.add('copy-success');
+                    
+                    // Reset button after 2 seconds
+                    setTimeout(function() {
+                        button.innerHTML = originalText;
+                        button.classList.remove('copy-success');
+                    }, 2000);
+                }).catch(function(err) {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    // Show success feedback
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    button.classList.add('copy-success');
+                    
+                    setTimeout(function() {
+                        button.innerHTML = originalText;
+                        button.classList.remove('copy-success');
+                    }, 2000);
+                });
+            }
+        </script>
+    </body>
+</html>
