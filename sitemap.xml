@@ -3,32 +3,270 @@
   <!-- Homepage -->
   <url>
     <loc>https://ijarers.com/</loc>
-    <lastmod>2025-06-22</lastmod>
+    <lastmod>2025-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Journal Issues -->
+  <!-- Main Pages -->
   <url>
-    <loc>https://ijarers.com/archive</loc>
-    <lastmod>2025-06-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://ijarers.com/about-us.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- Individual Articles -->
   <url>
-    <loc>https://ijarers.com/archive/volume-1-issue-1-2025/IJARERS</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://ijarers.com/contact-us.html</loc>
+    <lastmod>2025-07-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   
-  <!-- Static Pages (About, Submission, Contact) -->
   <url>
-    <loc>https://ijarers.com/faq/</loc>
-    <lastmod>2025-06-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://ijarers.com/editorial-board.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/submit-your-paper.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/current-issues.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/past-issues.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/publication.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/abstract.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issue.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Volume/Issue Pages -->
+  <url>
+    <loc>https://ijarers.com/issues/vol1iss1.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol1iss2.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol1iss3.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol1iss4.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol1iss5.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol2iss1.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol2iss2.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol2iss3.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol2iss4.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol2iss5.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol2iss6.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/issues/vol2iss7.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Individual Article Pages -->
+  <url>
+    <loc>https://ijarers.com/article/article.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/ijarers1801.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/ijarers1i01.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/ijarers1i02.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/issue.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss1_paper1.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss2_paper1.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss2_paper2.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss3_paper1.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss3_paper2.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss4_paper1.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss4_paper2.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss4_paper3.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss4_paper4.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss5_paper1.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijarers.com/article/vol1iss5_paper2.html</loc>
+    <lastmod>2025-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
