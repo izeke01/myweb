@@ -8,15 +8,7 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Main Pages -->
-
-<url>
-    <loc>https://ijarers.com/index.html</loc>
-    <lastmod>2025-07-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
+  <!-- Main Pages -->  
 
   <url>
     <loc>https://ijarers.com/about-us.html</loc>
