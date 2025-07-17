@@ -98,40 +98,8 @@
   
 
   <!-- Individual Article Pages -->
-  <url>
-    <loc>https://ijarers.com/article/article.html</loc>
-    <lastmod>2025-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijarers.com/article/ijarers1801.html</loc>
-    <lastmod>2025-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijarers.com/article/ijarers1i01.html</loc>
-    <lastmod>2025-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijarers.com/article/ijarers1i02.html</loc>
-    <lastmod>2025-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijarers.com/article/issue.html</loc>
-    <lastmod>2025-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
+
   
   <url>
     <loc>https://ijarers.com/article/vol1iss1_paper1.html</loc>
