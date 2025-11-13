@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Drought Monitoring and Response System: A Comparative Assessment of Machine Learning and Artificial Neural Network Approaches Using Remotely Sensed and Meteorological Data - IJARERS</title>
+        <meta name="description" content="This study develops a resilient agricultural drought assessment system for Shandong province, China, using SPEI-3 as the reference variable and multi-source remote sensing and modeled data with machine learning models (BRF, XGBoost, SVM).">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Google Scholar Meta Tags -->
+        <meta name="citation_title" content="Drought Monitoring and Response System: A Comparative Assessment of Machine Learning and Artificial Neural Network Approaches Using Remotely Sensed and Meteorological Data">
+        <meta name="citation_author" content="Devansh Rao">
+        <meta name="citation_author" content="Nikhil Bhasin">
+        <meta name="citation_author" content="Ishita Menon">
+        <meta name="citation_journal_title" content="International Journal of Advanced Research in Engineering and Related Sciences">
+        <meta name="citation_journal_abbrev" content="IJARERS">
+        <meta name="citation_issn" content="2278-909X">
+        <meta name="citation_volume" content="1">
+        <meta name="citation_issue" content="8">
+        <meta name="citation_firstpage" content="09">
+        <meta name="citation_lastpage" content="22">
+    <meta name="citation_publication_date" content="2025/11/10">
+        <meta name="citation_publisher" content="IJARERS">
+        <meta name="citation_abstract_html_url" content="https://ijarers.com/article/ijarers8002.html">
+        <meta name="citation_language" content="en">
+        <meta name="citation_keywords" content="Drought monitoring, Machine learning, Bias-Corrected Random Forest, BRF, Remote sensing, Standardized Precipitation Evapotranspiration Index, SPEI, Agricultural drought, Shandong Province, Climate variability">
+        <!-- Dublin Core Meta Tags -->
+        <meta name="DC.Title" content="Drought Monitoring and Response System: A Comparative Assessment of Machine Learning and Artificial Neural Network Approaches Using Remotely Sensed and Meteorological Data">
+        <meta name="DC.Creator" content="Devansh Rao">
+        <meta name="DC.Creator" content="Nikhil Bhasin">
+        <meta name="DC.Creator" content="Ishita Menon">
+        <meta name="DC.Subject" content="Drought monitoring, Machine learning, Bias-Corrected Random Forest, BRF, Remote sensing, SPEI, Agricultural drought, Shandong Province">
+        <meta name="DC.Description" content="This study develops a resilient agricultural drought assessment system for Shandong province, China, using SPEI-3 as the reference variable and multi-source remote sensing and modeled data with machine learning models (BRF, XGBoost, SVM).">
+        <meta name="DC.Publisher" content="International Journal of Advanced Research in Engineering and Related Sciences">
+    <meta name="DC.Date" content="2025-11-10">
+        <meta name="DC.Type" content="Text">
+        <meta name="DC.Format" content="text/html">
+        <meta name="DC.Identifier" content="https://ijarers.com/article/ijarers8002.html">
+        <meta name="DC.Language" content="en">
+        <meta name="DC.Rights" content="Copyright 2025 IJARERS">
+        <!-- Additional SEO Meta Tags -->
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow">
+        <meta name="author" content="Devansh Rao, Nikhil Bhasin, Ishita Menon">
+        <meta property="og:title" content="Drought Monitoring and Response System: A Comparative Assessment of Machine Learning and Artificial Neural Network Approaches Using Remotely Sensed and Meteorological Data">
+        <meta property="og:description" content="This study develops a resilient agricultural drought assessment system for Shandong province, China, using SPEI-3 as the reference variable and multi-source remote sensing and modeled data with machine learning models (BRF, XGBoost, SVM).">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://ijarers.com/article/ijarers8002.html">
+    <meta property="article:published_time" content="2025-11-10">
+        <meta property="article:section" content="Research Article">
+        <link rel="manifest" href="../site.webmanifest">
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../assets/css/animate.min.css">
+        <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="../assets/css/themify-icons.css">
+        <link rel="stylesheet" href="../assets/css/meanmenu.css">
+        <link rel="stylesheet" href="../assets/css/slick.css">
+        <link rel="stylesheet" href="../assets/css/default.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/responsive.css">
+        <link rel="stylesheet" href="../assets/css/custom.css">
+    </head>
+    <body>
+        <!-- header-start -->
+        <header class="header-transparent">
+            <div id="sticky-header" class="main-menu-area menu-bg pr-85">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3 col-4">
+                            <div class="logo logo-bg">
+                                <a href="../index.html"><img src="../assets/img/logo.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6 d-none d-lg-block">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="../index.html">Home</a></li>
+                                        <li><a href="../about-us.html">About Us</a></li>
+                                        <li><a href="../editorial-board.html">Editorial Board</a></li>
+                                        <li><a href="../submit-your-paper.html">Submit Your Paper</a></li>
+                                         <li><a href="../abstract.html">Indexing</a></li>
+                                        <li class="active"><a href="#">Issues <i class="fas fa-plus"></i></a>
+                                            <ul class="sub-menu text-left">
+                                                <li><a href="../current-issues.html">Current Issue</a></li>
+                                                <li><a href="../past-issues.html">Past Issues</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="../contact-us.html">contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-8">
+                            <div class="header-right f-left">
+                                <a href="mailto:editor@ijarers.com">
+                                    <div class="header-icon mr-15 f-left">
+                                        <i class=""></i>
+                                    </div>
+                                    <div class="header-info">
+                                        <span>Email Us</span>
+                                        <h5>editor@ijarers.com</h5>
+                                    </div>
+                               </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <main>
+            <!-- hero-area start -->
+            <div style="height:50px; background:#fff;"></div>
+            <!-- hero-area end -->
+            <!-- article-display-area start -->
+            <div class="article-display-area pt-80 pb-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="article-content">
+                                <!-- Article Header -->
+                                <div class="article-header mb-40">
+                                    <div class="article-meta mb-20">
+                                        <span class="article-type">Research Article</span>
+                                        <span class="article-date">Published: November 10, 2025</span>
+                                        <span class="article-volume">Volume 1, Issue 8</span>
+                                    </div>
+                                    <h2 class="article-title">Drought Monitoring and Response System: A Comparative Assessment of Machine Learning and Artificial Neural Network Approaches Using Remotely Sensed and Meteorological Data</h2>
+                                </div>
+                                <!-- Authors and Affiliations -->
+                                <div class="authors-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Authors</h3>
+                                    </div>
+                                    <div class="authors-list">
+                                        <div class="author-item mb-20">
+                                            <h6>Devansh Rao<sup>1</sup></h6>
+                                            <p><strong>Affiliation:</strong> National Institute of Technology Trichy (NIT Trichy), Tamil Nadu, India.</p>
+                                        </div>
+                                        <div class="author-item mb-20">
+                                            <h6>Nikhil Bhasin<sup>2</sup></h6>
+                                            <p><strong>Affiliation:</strong> Indian Institute of Science (IISc), Bengaluru, India.</p>
+                                        </div>
+                                        <div class="author-item mb-20">
+                                            <h6>Ishita Menon<sup>2</sup></h6>
+                                            <p><strong>Affiliation:</strong> Indian Institute of Science (IISc), Bengaluru, India.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Abstract Section -->
+                                <div class="abstract-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Abstract</h3>
+                                    </div>
+                                    <div class="abstract-content">
+                                        <p>Water, the universal solvent, is crucial for life, yet its preservation faces growing challenges from climate change and population growth. Understanding factors contributing to extreme events like droughts is vital for effective risk management. Drought inflicts substantial harm across social, economic, and agricultural domains, making an effective early warning and monitoring system essential, particularly given significant climatic variations and the anticipated increase in water scarcity and drought frequency. This study focuses on developing a resilient agricultural drought assessment system for Shandong province, China, using the three-month Standardized Precipitation Evapotranspiration Index (SPEI-3) as the reference variable. We used multi-source remote sensing and modeled data, including precipitation, soil moisture, vegetation indices (NDVI, EVI), and temperature, as input factors for three machine learning models: Bias-Corrected Random Forest (BRF), Extreme Gradient Boosting (XGBoost), and Support Vector Machines (SVM).<br>
+The results show that the BRF model significantly outperforms both SVM and XGBoost in simulating SPEI-3 values, achieving a high prediction accuracy (R-squared of 0.94) and a small prediction error (RMSE of 0.22) on the test set. Model stability, assessed through multiple runs and a leave-one-station-out cross-validation, further confirmed BRF's superior and more stable performance. An analysis of factor importance via the BRF model indicated that three-month cumulative precipitation is the most important factor in agricultural drought assessment, accounting for 55.17% of the relative importance, followed by soil moisture (10.2%). This research successfully validates the BRF model's high accuracy and stability for mapping the SPEI-3 index across space, offering a robust methodology for enhanced drought monitoring and response.</p>
+                                    </div>
+                                </div>
+                                <!-- Keywords Section -->
+                                <div class="keywords-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Keywords</h3>
+                                    </div>
+                                    <div class="keywords-content">
+                                        <span class="keyword-tag">Drought monitoring</span>
+                                        <span class="keyword-tag">Machine learning</span>
+                                        <span class="keyword-tag">Bias-Corrected Random Forest (BRF)</span>
+                                        <span class="keyword-tag">Remote sensing</span>
+                                        <span class="keyword-tag">Standardized Precipitation Evapotranspiration Index (SPEI)</span>
+                                        <span class="keyword-tag">Agricultural drought</span>
+                                        <span class="keyword-tag">Shandong Province</span>
+                                        <span class="keyword-tag">Climate variability</span>
+                                    </div>
+                                </div>
+                                <!-- Downloads Section -->
+                                <div class="results-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Downloads</h3>
+                                    </div>
+                                    <div class="results-content">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
+                                                <div class="result-image-box">
+                                                    <a href="../IJARERS_ARCHIVE/1i81.pdf" target="_blank" class="btn btn-primary">
+                                                        <i class="fas fa-download"></i> Download Full Paper (PDF)
+                                                    </a>
+                                                    <div class="image-caption mt-20">
+                                                        <h4>Full Research Paper</h4>
+                                                        <p>Complete research article with detailed methodology, results, and references.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Citation Section -->
+                                <div class="references-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>How to Cite</h3>
+                                    </div>
+                                    <div class="references-content">
+                                        <div class="citation-box p-20" style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+                                            <div class="citation-item mb-20">
+                                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                                    <p class="mb-0"><strong>APA Style:</strong></p>
+                                                    <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCitation('apa-citation')" title="Copy APA Citation">
+                                                        <i class="fas fa-copy"></i> Copy
+                                                    </button>
+                                                </div>
+                                                <p id="apa-citation" class="citation-text">Rao, D., Bhasin, N., & Menon, I. (2025). Drought Monitoring and Response System: A Comparative Assessment of Machine Learning and Artificial Neural Network Approaches Using Remotely Sensed and Meteorological Data. <em>International Journal of Advanced Research in Engineering and Related Sciences</em>, <em>1</em>(8), 09-22.</p>
+                                            </div>
+                                            <div class="citation-item">
+                                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                                    <p class="mb-0"><strong>IEEE Style:</strong></p>
+                                                    <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCitation('ieee-citation')" title="Copy IEEE Citation">
+                                                        <i class="fas fa-copy"></i> Copy
+                                                    </button>
+                                                </div>
+                                                <p id="ieee-citation" class="citation-text">D. Rao, N. Bhasin, and I. Menon, "Drought Monitoring and Response System: A Comparative Assessment of Machine Learning and Artificial Neural Network Approaches Using Remotely Sensed and Meteorological Data," <em>International Journal of Advanced Research in Engineering and Related Sciences</em>, vol. 1, no. 8, pp. 09-22, 2025.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- References Section -->
+                                <div class="references-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>References</h3>
+                                    </div>
+                                    <div class="references-content">
+                                        <ol class="references-list">
+<li>Ali, S.; Tong, D.M.; Xu, Z.T.; Henchiri, M.; Wilson, K.; Shi, S.Q.; Zhang, J.H. Characterization of Drought Monitoring Events through Modis-and Trmm-Based Dsi and Tvdi over South Asia During 2001–2017. Environ. Sci. Pollut. Res. 2019, 26, 33568–33581.</li>
+<li>Quiring, S.M.; Papakryiakou, T.N. An Evaluation of Agricultural Drought Indices for the Canadian Prairies. Agric. For. Meteorol. 2003, 118, 49–62.</li>
+<li>Wei, W.; Pang, S.F.; Wang, X.F.; Zhou, L.; Xie, B.B.; Zhou, J.J.; Li, C.H. Temperature Vegetation Precipitation Dryness Index (Tvpdi)-Based Dryness-Wetness Monitoring in China. Remote Sens. Environ. 2020, 248, 111957.</li>
+<li>Yao, N.; Li, Y.; Lei, T.J.; Peng, L.L. Drought Evolution, Severity and Trends in Mainland China over 1961–2013. Sci. Total Environ. 2018, 616, 73–89.</li>
+<li>Trenberth, K.E.; Dai, A.; Van Der Schrier, G.; Jones, P.D.; Barichivich, J.; Briffa, K.R.; Sheffield, J. Global Warming and Changes in Drought. Nat. Clim. Change 2014, 4, 17.</li>
+<li>Dai, A.G. Erratum: Drought under Global Warming: A Review. Wiley Interdiscip. Rev.-Clim. Chang. 2012, 3, 617.</li>
+<li>Vicente-Serrano, S.M.; Quiring, S.M.; Pena-Gallardo, M.; Yuan, S.S.; Dominguez-Castro, F. A Review of Environmental Droughts: Increased Risk under Global Warming? Earth-Sci. Rev. 2020, 201, 102953.</li>
+<li>Daryanto, S.; Wang, L.X.; Jacinthe, P.A. Global Synthesis of Drought Effects on Food Legume Production. PLoS ONE 2015, 10, e0127401.</li>
+<li>Daryanto, S.; Wang, L.X.; Jacinthe, P.A. Global Synthesis of Drought Effects on Maize and Wheat Production. PLoS ONE 2016, 11, e0156362.</li>
+<li>Loon, V.; Anne, F. Hydrological Drought Explained. Wiley Interdiscip. Rev. Water 2015, 2, 359–392.</li>
+<li>Allen, C.D.; Macalady, A.K.; Chenchouni, H.; Bachelet, D.; Mcdowell, N.; Vennetier, M.; Kitzberger, T.; Rigling, A.; Breshears, D.D.; Hogg, E.H.; et al. A Global Overview of Drought and Heat-Induced Tree Mortality Reveals Emerging Climate Change Risks for Forests. For. Ecol. Manag. 2010, 259, 660–684.</li>
+<li>Ciais, P.; Reichstein, M.; Viovy, N.; Granier, A.; Ogee, J.; Allard, V.; Aubinet, M.; Buchmann, N.; Bernhofer, C.; Carrara, A.; et al. Europe-Wide Reduction in Primary Productivity Caused by the Heat and Drought in 2003. Nature 2005, 437, 529–533.</li>
+<li>Zhao, M.S.; Running, S.W. Drought-Induced Reduction in Global Terrestrial Net Primary Production from 2000 through 2009. Science 2010, 329, 940–943.</li>
+<li>Aadhar, S.; Mishra, V. High-Resolution near Real-Time Drought Monitoring in South Asia. Sci. Data 2017, 4, 170145.</li>
+<li>He, B.; Wu, J.J.; Lu, A.F.; Cui, X.F.; Zhou, L.; Liu, M.; Zhao, L. Quantitative Assessment and Spatial Characteristic Analysis of Agricultural Drought Risk in China. Nat. Hazards 2013, 66, 155–166.</li>
+<li>Mottaleb, K.A.; Gumma, M.K.; Mishra, A.K.; Mohanty, S. Quantifying Production Losses Due to Drought and Submergence of Rainfed Rice at the Household Level Using Remotely Sensed Modis Data. Agric. Syst. 2015, 137, 227–235.</li>
+<li>Prodhan, F.A.; Zhang, J.H.; Yao, F.M.; Shi, L.M.; Sharma, T.P.P.; Zhang, D.; Cao, D.; Zheng, M.X.; Ahmed, N.; Mohana, H.P. Deep Learning for Monitoring Agricultural Drought in South Asia Using Remote Sensing Data. Remote Sens. 2021, 13, 1715.</li>
+<li>Yang, X.; Li, D. Temporal and Spatial Evolution Characteristics of Strong Drought Events in North and Northeast China. Arid Land Geogr. 2019, 42, 810–821.</li>
+<li>Ren, J.; Zhang, T. Evolution Characteristics of Drought and Flood in Shandong Province in Recent 45years Based on Standardized Precipitation Index. Res. Soil Water Conserv. 2021, 28, 149.</li>
+<li>Zhang, J.; Mu, Q.Z.; Huang, J.X. Assessing the Remotely Sensed Drought Severity Index for Agricultural Drought Monitoring and Impact Analysis in North China. Ecol. Indic. 2016, 63, 296–309.</li>
+<li>Yan, H.; Wan, Y.; Yan, X.; Xie, Y. A Study of the Temporal and Spatial Features of Dryness & Wetness Last 500Year Period in China. J. Yunnan Univ. (Nat. Sci.) 2004, 26, 139–143.</li>
+<li>Zhang, Y.; Wang, C.; Zhang, J. Analysis of the Spatial and Temporal Characteristics of Drought in the North China Plain Based on Standardized Precipitation Evapotranspiration Index. Acta Ecol. Sin. 2015, 35, 7097–7107.</li>
+<li>MckKee, T.B.; Doesken, N.J.; Kleist, J. The Relationship of Drought Frequency and Duration to Time Scales. In Proceedings of the 8th Conference on Applied Climatology, Anaheim, CA, USA, 17–22 January 1993; pp. 179– 184.</li>
+<li>Feng, P.Y.; Wang, B.; Liu, D.L.; Yu, Q. Machine Learning-Based Integration of Remotely-Sensed Drought Factors Can Improve the Estimation of Agricultural Drought in South-Eastern Australia. Agric. Syst. 2019, 173, 303–316.</li>
+<li>Rhee, J.; Im, J.; Carbone, G.J. Monitoring Agricultural Drought for Arid and Humid Regions Using Multi-Sensor Remote Sensing Data. Remote Sens. Environ. 2010, 114, 2875–2887.</li>
+<li>Liu, Q.; Zhang, J.H.; Zhang, H.R.; Yao, F.M.; Bai, Y.; Zhang, S.; Meng, X.L.; Liu, Q. Evaluating the Performance of Eight Drought Indices for Capturing Soil Moisture Dynamics in Various Vegetation Regions over China. Sci. Total Environ. 2021, 789, 147803.</li>
+<li>Yao, N.; Li, Y.; Liu, Q.Z.; Zhang, S.Y.; Chen, X.G.; Ji, Y.D.; Liu, F.G.; Pulatov, A.; Feng, P.Y. Response of Wheat and Maize Growth-Yields to Meteorological and Agricultural Droughts Based on Standardized Precipitation Evapotranspiration Indexes and Soil Moisture Deficit Indexes. Agric. Water Manag. 2022, 266, 107566.</li>
+<li>Swain, S.; Wardlow, B.D.; Narumalani, S.; Tadesse, T.; Callahan, K. Assessment of Vegetation Response to Drought in Nebraska Using Terra-Modis Land Surface Temperature and Normalized Difference Vegetation Index. Giscience Remote Sens. 2011, 48, 432–455.</li>
+<li>Ali, S.; Henchiri, M.; Yao, F.M.; Zhang, J.H. Analysis of Vegetation Dynamics, Drought in Relation with Climate over South Asia from 1990 to 2011. Environ. Sci. Pollut. Res. 2019, 26, 11470–11481.</li>
+<li>Shi, S.Q.; Yao, F.M.; Zhang, J.H.; Yang, S.S. Evaluation of Temperature Vegetation Dryness Index on Drought Monitoring over Eurasia. IEEE Access 2020, 8, 30050–30059.</li>
+<li>Wu, D.; Qu, J.J.; Hao, X.J. Agricultural Drought Monitoring Using Modis-Based Drought Indices over the USA Corn Belt. Int. J. Remote Sens. 2015, 36, 5403–5425</li>
+<li>Souza, A.; Neto, A.R.; Rossato, L.; Alvala, R.C.S.; Souza, L.L. Use of Smos L3 Soil Moisture Data: Validation and Drought Assessment for Pernambuco State, Northeast Brazil. Remote Sens. 2018, 10, 1314.</li>
+<li>Bai, Y.; Gao, J.; Zhang, B. Monitoring of Crops Growth Based on Ndvi and Evi. Trans. Chin. Soc. Agric. Mach. 2019, 50, 153–161.</li>
+<li>Gu, Y.X.; Brown, J.F.; Verdin, J.P.; Wardlow, B. A Five-Year Analysis of Modis Ndvi and Ndwi for Grassland Drought Assessment over the Central Great Plains of the United States. Geophys. Res. Lett. 2007, 34.</li>
+<li>Lei, Q.; Zhang, X.; Wang, X.; He, X.; Shang, C. Responses of Vegetation Index to Meteorological Drought in Dongting Lake Basin Based on Modis-Evi and Ci. Resour. Environ. Yangtze Basin 2019, 28, 981–993.</li>
+<li>Wang, K.Y.; Li, T.J.; Wei, J.H. Exploring Drought Conditions in the Three River Headwaters Region from 2002 to 2011 Using Multiple Drought Indices. Water 2019, 11, 190.</li>
+<li>Liu, H.; Liu, R.; Liu, S. Review of Drought Monitoring by Remote Sensing. J. Geo-Inf. Sci. 2012, 14, 232–239.</li>
+<li>Alizadeh, M.R.; Nikoo, M.R. A Fusion-Based Methodology for Meteorological Drought Estimation Using Remote Sensing Data. Remote Sens. Environ. 2018, 211, 229–247.</li>
+<li>Han, P.; Wang, P.X.; Zhang, S.Y.; Zhu, D.H. Drought Forecasting Based on the Remote Sensing Data Using Arima Models. Math. Comput. Model. 2010, 51, 1398–1403.</li>
+<li>Mishra, A.K.; Singh, V.P. Drought Modeling—A Review. J. Hydrol. 2011, 403, 157–175</li>
+<li>Swain, S.; Wardlow, B.D.; Narumalani, S.; Tadesse, T.; Callahan, K. Assessment of Vegetation Response to Drought in Nebraska Using Terra-Modis Land Surface Temperature and Normalized Difference Vegetation Index. Giscience Remote Sens. 2011, 48, 432–455.</li>
+<li>Park, S.; Im, J.; Jang, E.; Rhee, J. Drought Assessment and Monitoring through Blending of Multi-Sensor Indices Using Machine Learning Approaches for Different Climate Regions. Agric. For. Meteorol. 2016, 216, 157–169.</li>
+<li>Mishra, A.K.; Singh, V.P. Drought Modeling—A Review. J. Hydrol. 2011, 403, 157–175.</li>
+<li>Wanders, N.; Wood, E.F. Improved Sub-Seasonal Meteorological Forecast Skill Using Weighted Multi-Model Ensemble Simulations. Environ. Res. Lett. 2016, 11, 094007.</li>
+<li>Morid, S.; Smakhtin, V.; Bagherzadeh, K. Drought Forecasting Using Artificial Neural Networks and Time Series of Drought Indices. Int. J. Climatol. 2007, 27, 2103–2111.</li>
+<li>Wang, Q.J.; Schepen, A.; Robertson, D.E. Merging Seasonal Rainfall Forecasts from Multiple Statistical Models through Bayesian Model Averaging. J. Clim. 2012, 25, 5524–5537.</li>
+<li>Abbot, J.; Marohasy, J. Input Selection and Optimisation for Monthly Rainfall Forecasting in Queensland, Australia, Using Artificial Neural Networks. Atmos. Res. 2014, 138, 166–178.</li>
+<li>Hao, Z.C.; Singh, V.P.; Xia, Y.L. Seasonal Drought Prediction: Advances, Challenges, and Future Prospects. Rev. Geophys. 2018, 56, 108–141.</li>
+<li>Barua, S.; Ng, A.W.M.; Perera, B.J.C. Artificial Neural Network-Based Drought Forecasting Using a Nonlinear Aggregated Drought Index. J. Hydrol. Eng. 2012, 17, 1408–1413.</li>
+<li>Dikshit, A.; Pradhan, B.; Alamri, A.M. Temporal Hydrological Drought Index Forecasting for New South Wales, Australia Using Machine Learning Approaches. Atmosphere 2020, 11, 585.</li>
+<li>Khan, N.; Sachindra, D.A.; Shahid, S.; Ahmed, K.; Shiru, M.S.; Nawaz, N. Prediction of Droughts over Pakistan Using Machine Learning Algorithms. Adv. Water Resour. 2020, 139, 103562.</li>
+<li>Belayneh, A.; Adamowski, J.; Khalil, B.; Ozga-Zielinski, B. Long-Term Spi Drought Forecasting in the Awash River Basin in Ethiopia Using Wavelet Neural Network and Wavelet Support Vector Regression Models. J. Hydrol. 2014, 508, 418–429.</li>
+<li>Guzman, S.M.; Paz, J.O.; Tagert, M.L.M.; Mercer, A.E.; Pote, J.W. An Integrated Svr and Crop Model to Estimate the Impacts of Irrigation on Daily Groundwater Levels. Agric. Syst. 2018, 159, 248–259.</li>
+<li>Cutler, D.R.; Edwards, T.C.; Beard, K.H.; Cutler, A.; Hess, K.T.; Gibson, J.; Lawler, J.J. Random Forests for Classification in Ecology. Ecology 2007, 88, 2783–2792.</li>
+<li>Song, J. Bias Corrections for Random Forest in Regression Using Residual Rotation. J. Korean Stat. Soc. 2015, 44, 321–326.</li>
+<li>Chen, T.Q.; Guestrin, C.; Assoc Comp, M. Xgboost: A Scalable Tree Boosting System. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD), San Francisco, CA, USA, 13–17 August 2016.</li>
+<li>Chen, Y.; Niu, J.Q.; Chen, G.Q.; Wang, J.; Cao, S.L.; Publishing, I.O.P. Precipitation Sequence Analysis of Representative Stations in Shandong Province from 1956 to 2016. In Proceedings of the 6th International Conference on Energy Materials and Environment Engineering (ICEMEE), Zhangjiajie, China, 24–26 April 2020.</li>
+<li>Li, H.; Wang, W. Climate Characteristics of Seasonal Drought for Crops Growth in Shandong. J. Arid Land Resour. Environ. 2015, 29, 191–196.</li>
+<li>Li, F.; Yang, X. Changes and Driving Force of Grain Production in Shandong Province During 1999–2014. Acta Agric. Zhejiangensis 2016, 28, 535–542.</li>
+<li>Han, H.Z.; Bai, J.J.; Yan, J.W.; Yang, H.Y.; Ma, G. A Combined Drought Monitoring Index Based on MultiSensor Remote Sensing Data and Machine Learning. Geocarto Int. 2021, 36, 1161–1177.</li>
+<li>Shen, R.P.; Huang, A.Q.; Li, B.L.; Guo, J. Construction of a Drought Monitoring Model Using Deep Learning Based on Multi-Source Remote Sensing Data. Int. J. Appl. Earth Obs. Geoinf. 2019, 79, 48–57.</li>
+<li>Tapiador, F.J.; Turk, F.J.; Petersen, W.; Hou, A.Y.; Garcia-Ortega, E.; Machado, L.A.; Angelis, C.F.; Salio, P.; Kidd, C.; Huffman, G.J.; et al. Global Precipitation Measurement: Methods, Datasets and Applications. Atmos. Res. 2012, 104, 70–97.</li>
+<li>Zhao, J.; Yan, D.H.; Yang, Z.Y.; Hu, Y.; Weng, B.S.; Gong, B.Y. Improvement and Adaptability Evaluation of Standardized Precipitation Evapotranspiration Index. Acta Phys. Sin. 2015, 64, 049202.</li>
+<li>Almeida-Naunay, A.F.; Villeta, M.; Quemada, M.; Tarquis, A.M. Assessment of Drought Indexes on Different Time Scales: A Case in Semiarid Mediterranean Grasslands. Remote Sens. 2022, 14, 565.</li>
+<li>Wen, J.; Zhang, X.; Wang, Y.; Wang, W. Effects of Drought in Multi-Time Scale on Wheat Crop in Eastern Agricultural Region of Qinghai Province. J. Irrig. Drain. 2016, 35, 92–97.</li>
+<li>Javed, T.; Zhang, J.H.; Bhattarai, N.; Sha, Z.; Rashid, S.; Yun, B.; Ahmad, S.; Henchiri, M.; Kamran, M. Drought Characterization across Agricultural Regions of China Using Standardized Precipitation and Vegetation Water Supply Indices. J. Clean. Prod. 2021, 313.</li>
+<li>Zhang, J.H.; Zhou, Z.M.; Yao, F.M.; Yang, L.M.; Hao, C. Validating the Modified Perpendicular Drought Index in the North China Region Using in Situ Soil Moisture Measurement. IEEE Geosci. Remote Sens. Lett. 2015, 12, 542–546.</li>
+<li>Wu, L. Classification of Drought Grades Based on Temperature Vegetation Drought Index Using the Modis Data. Res. Soil Water Conserv. 2017, 24, 130–135.</li>
+<li>Wang, Y.P.; Wang, S.; Zhao, W.W.; Liu, Y.X. The Increasing Contribution of Potential Evapotranspiration to Severe Droughts in the Yellow River Basin. J. Hydrol. 2022, 605, 127310.</li>
+<li>Seiler, R.A.; Kogan, F.; Sullivan, J. Avhrr-Based Vegetation and Temperature Condition Indices for Drought Detection in Argentina. Adv. Space Res. 1998, 21, 481–484.</li>
+<li>Kogan, F.N. Application of Vegetation Index and Brightness Temperature for Drought Detection. Adv. Space Res. 1995, 15, 91–100.</li>
+<li>Ishwaran, H.; Malley, J.D. Synthetic Learning Machines. Biodata Min. 2014, 7, 28.</li>
+<li>Zhang, G.Y.; Lu, Y. Bias-Corrected Random Forests in Regression. J. Appl. Stat. 2012, 39, 151–160.</li>
+<li>Li, H.; Zhu, Y. Xgboost Algorithm Optimization Based on Gradient Distribution Harmonized Strategy. J. Comput. Appl. 2020, 40, 1633–1637.</li>
+<li>Chen, J.X.; Zhao, F.; Sun, Y.G.; Yin, Y.L. Improved Xgboost Model Based on Genetic Algorithm. Int. J. Comput. Appl. Technol. 2020, 62, 240–245.</li>
+<li>Corinna, C.; Vladimir, V. Support-Vector Networks. Mach. Learn. 1995, 20, 273–297.</li>
+<li>Haitao, L.I.; Haiyan, G.U.; Bing, Z.; Lianru, G. Research on Hyperspectral Remote Sensing Image Classification Based on Mnf and Svm. Remote Sens. Inf. 2007, 5, 12–15.</li>
+<li>Mountrakis, G.; Im, J.; Ogole, C. Support Vector Machines in Remote Sensing: A Review. Isprs J. Photogramm. Remote Sens. 2011, 66, 247–259.</li>
+<li>Shen, R.; Guo, J.; Zhang, J.; Li, L. Construction of a Drought Monitoring Model Using the Random Forest Based Remote Sensing. J. Geo-Inf. Sci. 2017, 19, 125–133.</li>
+<li>Were, K.; Bui, D.T.; Dick, O.B.; Singh, B.R. A Comparative Assessment of Support Vector Regression, Artificial Neural Networks, and Random Forests for Predicting and Mapping Soil Organic Carbon Stocks across an Afromontane Landscape. Ecol. Indic. 2015, 52, 394–403.</li>
+<li>Xu, Z.; Han, M. Spatio-Temporal Distribution Characteristics of Drought in Shandong Province and It Relationship with Enso. Chin. J. Eco-Agric. 2018, 26, 1236–1248.</li>
+<li>Yao, T.; Zhao, Q.; Li, X.Y.; Shen, Z.T.; Ran, P.Y.; Wu, W. Spatiotemporal Variations of Multi-Scale Drought in Shandong Province from 1961 to 2017. Water Supply 2021, 21, 525–541.</li>
+<li>Yang, M.X.; Mou, Y.L.; Meng, Y.R.; Liu, S.; Peng, C.H.; Zhou, X.L. Modeling the Effects of Precipitation and Temperature Patterns on Agricultural Drought in China from 1949 to 2015. Sci. Total Environ. 2020, 711, 135139.</li>
+<li>Seneviratne, S.I.; Corti, T.; Davin, E.L.; Hirschi, M.; Jaeger, E.B.; Lehner, I.; Orlowsky, B.; Teuling, A.J. Investigating Soil Moisture-Climate Interactions in a Changing Climate: A Review. Earth-Sci. Rev. 2010, 99, 125–161.</li>
+<li>Sims, A.P.; Niyogi, D.D.S.; Raman, S. Adopting Drought Indices for Estimating Soil Moisture: A North Carolina Case Study. Geophys. Res. Lett. 2002, 29, 24-1–24-4.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- article-display-area end -->
+        </main>
+        <!-- footer-area-start -->
+        <footer>
+            <div class="footer-top-area black-bg pt-40">
+                <div class="container">
+                    <div class="footer-middle-area mt-30 pb-30 pt-60">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">About IJARERS</h3>
+                                    <div class="footer-text">
+                                        <p>International Journal of Advanced Research in Engineering and Related Sciences (IJARERS) is a peer-reviewed open access journal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Quick Links</h3>
+                                    <div class="footer-text">
+                                        <ul>
+                                            <li><a href="../about-us.html">About Us</a></li>
+                                            <li><a href="../editorial-board.html">Editorial Board</a></li>
+                                            <li><a href="../submit-your-paper.html">Submit Paper</a></li>
+                                            <li><a href="../contact-us.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Issues</h3>
+                                    <div class="footer-text">
+                                        <ul>
+                                            <li><a href="../current-issues.html">Current Issues</a></li>
+                                            <li><a href="../past-issues.html">Past Issues</a></li>
+                                            <li><a href="../issues/vol1iss8.html">Volume 1, Issue 8</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Contact Info</h3>
+                                    <div class="footer-text">
+                                        <p>Email: editor@IJARERS.com</p>
+                                        <p>Website: IJARERS.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-area black-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="footer-bottom-content text-center">
+                                <p>&copy; 2025 IJARERS. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-area-end -->
+        <!-- JS here -->
+        <script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/owl.carousel.min.js"></script>
+        <script src="../assets/js/slick.min.js"></script>
+        <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="../assets/js/waypoints.min.js"></script>
+        <script src="../assets/js/jquery.counterup.min.js"></script>
+        <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="../assets/js/isotope.pkgd.min.js"></script>
+        <script src="../assets/js/jquery.appear.js"></script>
+        <script src="../assets/js/jquery.knob.js"></script>
+        <script src="../assets/js/wow.min.js"></script>
+        <script src="../assets/js/ajax-form.js"></script>
+        <script src="../assets/js/jquery.scrollUp.min.js"></script>
+        <script src="../assets/js/jquery.meanmenu.min.js"></script>
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <!-- Citation Copy Functionality -->
+        <style>
+            .copy-btn {
+                font-size: 12px;
+                padding: 4px 8px;
+                border-radius: 3px;
+            }
+            .copy-btn:hover {
+                background-color: #007bff;
+                color: white;
+            }
+            .citation-text {
+                background: white;
+                padding: 10px;
+                border-radius: 3px;
+                border: 1px solid #e9ecef;
+                margin: 0;
+            }
+            .copy-success {
+                background-color: #28a745 !important;
+                color: white !important;
+            }
+        </style>
+        <script>
+            function copyCitation(elementId) {
+                const citationElement = document.getElementById(elementId);
+                const button = event.target.closest('.copy-btn');
+                const textToCopy = citationElement.textContent || citationElement.innerText;
+                navigator.clipboard.writeText(textToCopy).then(function() {
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    button.classList.add('copy-success');
+                    setTimeout(function() {
+                        button.innerHTML = originalText;
+                        button.classList.remove('copy-success');
+                    }, 2000);
+                }).catch(function(err) {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    button.classList.add('copy-success');
+                    setTimeout(function() {
+                        button.innerHTML = originalText;
+                        button.classList.remove('copy-success');
+                    }, 2000);
+                });
+            }
+        </script>
+    </body>
+</html>
