@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Modelling Of Picralima Nitida Extraction and Optimization of the Effect of Process Parameters Using Artificial Neural Network and Response Surface Methodology - IJARERS</title>
+        <meta name="description" content="This study explores the extraction of bioactive components from Picralima nitida using ethanol as solvent and optimizing extraction yield through ANN and RSM.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Google Scholar Meta Tags -->
+        <meta name="citation_title" content="Modelling Of Picralima Nitida Extraction and Optimization of the Effect of Process Parameters Using Artificial Neural Network and Response Surface Methodology">
+        <meta name="citation_author" content="Joshua. E.O.">
+        <meta name="citation_author" content="Oyedoh. E.A.">
+        <meta name="citation_author" content="Victory I.A">
+        <meta name="citation_author" content="Aiwekhoe S.E">
+        <meta name="citation_journal_title" content="International Journal of Advanced Research in Engineering and Related Sciences">
+        <meta name="citation_journal_abbrev" content="IJARERS">
+        <meta name="citation_issn" content="2278-909X">
+        <meta name="citation_volume" content="2">
+        <meta name="citation_issue" content="1">
+        <meta name="citation_firstpage" content="21">
+        <meta name="citation_lastpage" content="35">
+    <meta name="citation_publication_date" content="2026/02/24">
+        <meta name="citation_publisher" content="IJARERS">
+        <meta name="citation_abstract_html_url" content="https://ijarers.com/article/ijarers21003.html">
+        <meta name="citation_language" content="en">
+        <meta name="citation_keywords" content="Picralima nitida, Artificial Neural Network, Response Surface Methodology, Soxhlet extraction, Bioactive components, Process optimization, Extraction yield, GC-MS analysis, Phytochemicals, Predictive modelling, Secondary metabolites, Traditional medicine, Process parameters">
+        <!-- Dublin Core Meta Tags -->
+        <meta name="DC.Title" content="Modelling Of Picralima Nitida Extraction and Optimization of the Effect of Process Parameters Using Artificial Neural Network and Response Surface Methodology">
+        <meta name="DC.Creator" content="Joshua. E.O.">
+        <meta name="DC.Creator" content="Oyedoh. E.A.">
+        <meta name="DC.Creator" content="Victory I.A">
+        <meta name="DC.Creator" content="Aiwekhoe S.E">
+        <meta name="DC.Subject" content="Picralima nitida, Artificial Neural Network, Response Surface Methodology, Soxhlet extraction, Bioactive components, Process optimization, Extraction yield, GC-MS analysis, Phytochemicals, Predictive modelling, Secondary metabolites, Traditional medicine, Process parameters">
+        <meta name="DC.Description" content="This study explores the extraction of bioactive components from Picralima nitida using ethanol as solvent and optimizing extraction yield through ANN and RSM.">
+        <meta name="DC.Publisher" content="International Journal of Advanced Research in Engineering and Related Sciences">
+    <meta name="DC.Date" content="2026-02-24">
+        <meta name="DC.Type" content="Text">
+        <meta name="DC.Format" content="text/html">
+        <meta name="DC.Identifier" content="https://ijarers.com/article/ijarers21003.html">
+        <meta name="DC.Language" content="en">
+        <meta name="DC.Rights" content="Copyright 2026 IJARERS">
+        <!-- Additional SEO Meta Tags -->
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow">
+        <meta name="author" content="Joshua. E.O., Oyedoh. E.A., Victory I.A, Aiwekhoe S.E">
+        <meta property="og:title" content="Modelling Of Picralima Nitida Extraction and Optimization of the Effect of Process Parameters Using Artificial Neural Network and Response Surface Methodology">
+        <meta property="og:description" content="This study explores the extraction of bioactive components from Picralima nitida using ethanol as solvent and optimizing extraction yield through ANN and RSM.">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://ijarers.com/article/ijarers21003.html">
+    <meta property="article:published_time" content="2026-02-24">
+        <meta property="article:section" content="Research Article">
+        <link rel="manifest" href="../site.webmanifest">
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../assets/css/animate.min.css">
+        <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="../assets/css/themify-icons.css">
+        <link rel="stylesheet" href="../assets/css/meanmenu.css">
+        <link rel="stylesheet" href="../assets/css/slick.css">
+        <link rel="stylesheet" href="../assets/css/default.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/responsive.css">
+        <link rel="stylesheet" href="../assets/css/custom.css">
+    </head>
+    <body>
+        <!-- header-start -->
+        <header class="header-transparent">
+            <div id="sticky-header" class="main-menu-area menu-bg pr-85">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3 col-4">
+                            <div class="logo logo-bg">
+                                <a href="../index.html"><img src="../assets/img/logo.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6 d-none d-lg-block">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="../index.html">Home</a></li>
+                                        <li><a href="../about-us.html">About Us</a></li>
+                                        <li><a href="../editorial-board.html">Editorial Board</a></li>
+                                        <li><a href="../submit-your-paper.html">Submit Your Paper</a></li>
+                                         <li><a href="../abstract.html">Indexing</a></li>
+                                        <li class="active"><a href="#">Issues <i class="fas fa-plus"></i></a>
+                                            <ul class="sub-menu text-left">
+                                                <li><a href="../current-issues.html">Current Issue</a></li>
+                                                <li><a href="../past-issues.html">Past Issues</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="../contact-us.html">contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-8">
+                            <div class="header-right f-left">
+                                <a href="mailto:editor@ijarers.com">
+                                    <div class="header-icon mr-15 f-left">
+                                        <i class=""></i>
+                                    </div>
+                                    <div class="header-info">
+                                        <span>Email Us</span>
+                                        <h5>editor@ijarers.com</h5>
+                                    </div>
+                               </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <main>
+            <!-- hero-area start -->
+            <div style="height:50px; background:#fff;"></div>
+            <!-- hero-area end -->
+            <!-- article-display-area start -->
+            <div class="article-display-area pt-80 pb-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="article-content">
+                                <!-- Article Header -->
+                                <div class="article-header mb-40">
+                                    <div class="article-meta mb-20">
+                                        <span class="article-type">Research Article</span>
+                                        <span class="article-date">Published: February 24, 2026</span>
+                                        <span class="article-volume">Volume 2, Issue 1</span>
+                                    </div>
+                                    <h2 class="article-title">Modelling Of Picralima Nitida Extraction and Optimization of the Effect of Process Parameters Using Artificial Neural Network and Response Surface Methodology</h2>
+                                </div>
+                                <!-- Authors and Affiliations -->
+                                <div class="authors-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Authors</h3>
+                                    </div>
+                                    <div class="authors-list">
+                                        <div class="author-item mb-20">
+                                            <h6>Joshua. E.O.<sup>1</sup></h6>
+                                            <p><strong>Affiliation:</strong> Department of Chemical Engineering, University of Benin, Benin City, PMB 1154.</p>
+                                        </div>
+                                        <div class="author-item mb-20">
+                                            <h6>Oyedoh. E.A.<sup>1</sup></h6>
+                                            <p><strong>Affiliation:</strong> Department of Chemical Engineering, University of Benin, Benin City, PMB 1154.</p>
+                                        </div>
+                                        <div class="author-item mb-20">
+                                            <h6>Victory I.A<sup>1</sup></h6>
+                                            <p><strong>Affiliation:</strong> Department of Chemical Engineering, University of Benin, Benin City, PMB 1154.</p>
+                                        </div>
+                                        <div class="author-item mb-20">
+                                            <h6>Aiwekhoe S.E<sup>1</sup></h6>
+                                            <p><strong>Affiliation:</strong> Department of Chemical Engineering, University of Benin, Benin City, PMB 1154.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Abstract Section -->
+                                <div class="abstract-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Abstract</h3>
+                                    </div>
+                                    <div class="abstract-content">
+                                        <p>This study explores the extraction of bioactive components from the deciduous tree Picralima nitida, which is utilized in pharmacology and traditional medicine. The components, including alkaloids, flavonoids, tannins, and saponins, were extracted using ethanol as the solvent under different conditions such as particle size, temperature, and extraction time. The goal was to optimize the extraction process to achieve the highest yield. The study revealed that extraction yield was directly proportional to both temperature and time, while it had an inverse relationship with particle size. Two optimization tools, artificial neural network (ANN) and response surface methodology (RSM), were employed to model and optimize the extraction process. RSM was used to develop a quadratic model for predicting extraction yield based on variations in particle size, temperature, and extraction time. ANN, on the other hand, utilized the Bayesian regularization learning algorithm with the hyperbolic tangent (Tanh) function for the hidden and output layers, proving to be the superior model for predicting extraction yield. The performance of both models was evaluated using R2 and RMSE values. ANN yielded an R2 value of 0.97708 and an RMSE value of 0.063578, while RSM resulted in an R2 value of 0.9296 and an RMSE value of 2.07. Despite RSM predicting a higher optimum yield of 42.87 at 90°C, 50 minutes, and 1mm for temperature, extraction time, and particle size, respectively, ANN provided a more accurate prediction of 40.5762 under the same conditions. Therefore, based on the predicted yields, ANN is recommended as the more effective tool for modelling and optimizing the extraction process.</p>
+                                    </div>
+                                </div>
+                                <!-- Keywords Section -->
+                                <div class="keywords-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Keywords</h3>
+                                    </div>
+                                    <div class="keywords-content">
+                                        <span class="keyword-tag">Picralima nitida</span>
+                                        <span class="keyword-tag">Artificial Neural Network</span>
+                                        <span class="keyword-tag">Response Surface Methodology</span>
+                                        <span class="keyword-tag">Soxhlet extraction</span>
+                                        <span class="keyword-tag">Bioactive components</span>
+                                        <span class="keyword-tag">Process optimization</span>
+                                        <span class="keyword-tag">Extraction yield</span>
+                                        <span class="keyword-tag">GC-MS analysis</span>
+                                        <span class="keyword-tag">Phytochemicals</span>
+                                        <span class="keyword-tag">Predictive modelling</span>
+                                        <span class="keyword-tag">Secondary metabolites</span>
+                                        <span class="keyword-tag">Traditional medicine</span>
+                                        <span class="keyword-tag">Process parameters</span>
+                                    </div>
+                                </div>
+                                <!-- Downloads Section -->
+                                <div class="results-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Downloads</h3>
+                                    </div>
+                                    <div class="results-content">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
+                                                <div class="result-image-box">
+                                                    <a href="../IJARERS_ARCHIVE/2i3.pdf" target="_blank" class="btn btn-primary">
+                                                        <i class="fas fa-download"></i> Download Full Paper (PDF)
+                                                    </a>
+                                                    <div class="image-caption mt-20">
+                                                        <h4>Full Research Paper</h4>
+                                                        <p>Complete research article with detailed methodology, results, and references.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Citation Section -->
+                                <div class="references-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>How to Cite</h3>
+                                    </div>
+                                    <div class="references-content">
+                                        <div class="citation-box p-20" style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+                                            <div class="citation-item mb-20">
+                                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                                    <p class="mb-0"><strong>APA Style:</strong></p>
+                                                    <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCitation('apa-citation')" title="Copy APA Citation">
+                                                        <i class="fas fa-copy"></i> Copy
+                                                    </button>
+                                                </div>
+                                                <p id="apa-citation" class="citation-text">Joshua, E.O., Oyedoh, E.A., Victory, I.A., & Aiwekhoe, S.E. (2026). Modelling of Picralima nitida extraction and optimization of the effect of process parameters using artificial neural network and response surface methodology. <em>International Journal of Advanced Research in Engineering and Related Sciences</em>, <em>2</em>(1), 21-35.</p>
+                                            </div>
+                                            <div class="citation-item">
+                                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                                    <p class="mb-0"><strong>IEEE Style:</strong></p>
+                                                    <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCitation('ieee-citation')" title="Copy IEEE Citation">
+                                                        <i class="fas fa-copy"></i> Copy
+                                                    </button>
+                                                </div>
+                                                <p id="ieee-citation" class="citation-text">E.O. Joshua, E.A. Oyedoh, I.A. Victory, and S.E. Aiwekhoe, "Modelling of Picralima nitida extraction and optimization of the effect of process parameters using artificial neural network and response surface methodology," <em>International Journal of Advanced Research in Engineering and Related Sciences</em>, vol. 2, no. 1, pp. 21-35, 2026.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- References Section -->
+                                <div class="references-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>References</h3>
+                                    </div>
+                                    <div class="references-content">
+                                        <ol class="references-list">
+<li>Adepiti, A. O., Nyamboki, D. K., Bedane, K. G., Elujoba, A. A., Spiteller, M., & Matasyoh, J. C. (2025). "Secondary metabolites from the stem bark of Alstonia boonei and the seeds of Picralima nitida with antibacterial activities," <em>Natural Product Research</em>, vol. 39, no. 16, pp. 4751–4756. [Online]. Available: https://doi.org/10.1080/14786419.2024.2349254</li>
+<li>Agu, P. C., Nduneseokwu, N. C., Nwiziogo, F. C., Okafor, M. U., Alum, E. U., Egwu, C. O., ... & Aja, P. M. (2025). "Historical and ethnopharmacological perspectives on African medicinal plants: From traditional remedies to computational drug discovery," <em>Scientific African</em>, vol. 30, p. e02941. [Online]. Available: https://doi.org/10.1016/J.SCIAF.2025.E02941</li>
+<li>Alaebo, P. O., Achi, N. K., Ezurike, P. U., Egbuonu, A. C. C., Nwuke, C. P., Chukwuka, E. W., ... & Abuchi, F. J. (2025). "Phytochemical composition, antibacterial activity, proximate and mineral analysis of methanol extract from combined seeds and peels of Picralima nitida," <em>Universal Journal of Pharmaceutical Research</em>, vol. 10, no. 1, pp. 39–44. [Online]. Available: https://doi.org/10.22270/UJPR.V10I1.1268</li>
+<li>Berkowitz, L., Araneda, P., Cofré, G., Sara, D., Olsen, M., Urzúa, I., ... & Rigotti, A. (2026). "The controversial role of linoleic acid in cardiometabolic health: from molecular pathways to human studies," <em>Frontiers in Nutrition</em>, vol. 12, p. 1728865. [Online]. Available: https://doi.org/10.3389/FNUT.2025.1728865</li>
+<li>El Allaoui, H., El Ahmadi, K., El Abdouni, A., Dira, I., El Bastrioui, M., Bouhrim, M., ... & Haboubi, K. (2024). "Trends and Insights in Medicinal Plant Extract Research: A Ten-Year Bibliometric and Visualization Study," <em>Horticulturae</em>, vol. 10, no. 11. [Online]. Available: https://doi.org/10.3390/HORTICULTURAE10111163</li>
+<li>Hlatshwayo, S., Thembane, N., Krishna, S. B. N., Gqaleni, N., & Ngcobo, M. (2025). "Extraction and Processing of Bioactive Phytoconstituents from Widely Used South African Medicinal Plants for the Preparation of Effective Traditional Herbal Medicine Products: A Narrative Review," <em>Plants</em>, vol. 14, no. 2. [Online]. Available: https://doi.org/10.3390/PLANTS14020206</li>
+<li>Jean-Claude, M., Sirabana, C., Severin, K., Jeanne, Y. G., & Yaya, S. T. (2025). "Phytochemical Study and Evaluation of Anti-Inflammatory Properties of Aqueous Extract of Picralima nitida (Apocynaceae) Seeds in Wistar Rats," <em>European Journal of Medicinal Plants</em>, vol. 36, no. 6, pp. 95–102. [Online]. Available: https://doi.org/10.9734/EJMP/2025/V36I61309</li>
+<li>Kayembe, J. P., Mpiana, P. T., Liyongo Inkoto, C., Kayembe Kayembe, J.-P., Tshimankinda Mpiana, P., & Ngbolua, K.-N. (2020). "A review on the Phytochemistry and Pharmacological properties of Picralima nitida Durand and H. (Apocynaceae family): A potential antiCovid-19 medicinal plant species," <em>Emer Life Sci Res</em>, vol. 6, no. 1, pp. 64–75. [Online]. Available: https://doi.org/10.31783/elsr.2020.616475</li>
+<li>Manoharan, R., Nair, C. S., Eissa, N., Cheng, H., Ge, P., Ren, M., & Jaleel, A. (2024). "Therapeutic Potential of Solanum Alkaloids with Special Emphasis on Cancer: A Comprehensive Review," <em>Drug Design, Development and Therapy</em>, vol. 18, pp. 3063–3074. [Online]. Available: https://doi.org/10.2147/DDDT.S470925</li>
+<li>Ogbeide, O. K., Sajere, O., Omorefe, N., Aghedo, O. N., Isibor, J. I., Osarinmwian, O., ... & Iyekowa, O. (2025). "Selected Preclinical Studies on Picralima nitida Stem Bark Extract," <em>Tropical Journal of Drug Research</em>, vol. 2, no. 2, p. 29. [Online]. Available: https://doi.org/10.26538/TJDR/V2I2.1</li>
+<li>Ololade, A. M., Anowi, F. C., Anwuchaepe, A. A., & IfedibaluChukwu, E. I. (2023). "Pharmacognostic Study and Hepatoprotective Activity of the Methanolic Extract and Fractions of Leaves of Picralima nitida Apocyanaceae," <em>Sciences of Phytochemistry</em>, vol. 2, no. 1, pp. 88–98. [Online]. Available: https://doi.org/10.58920/SCIPHY02010114</li>
+<li>Onwuegbuchulam, C. H., Peter, D. A., & Moses, O. I. (2024a). "Phytochemical Screening and Gas Chromatography-Mass Spectrometry Analysis of Bioactive Compounds Present in Stem Bark of Picralima nitida (stapf)," <em>Journal of Diseases and Medicinal Plants</em>, vol. 10, no. 1, pp. 8–16. [Online]. Available: https://doi.org/10.11648/J.JDMP.20241001.12</li>
+<li>Onwuegbuchulam, C. H., Peter, D. A., & Moses, O. I. (2024b). "Phytochemical Screening and Gas Chromatography-Mass Spectrometry Analysis of Bioactive Compounds Present in Stem Bark of Picralima nitida (stapf)," <em>Journal of Diseases and Medicinal Plants</em>, vol. 10, no. 1, pp. 8–16. [Online]. Available: https://doi.org/10.11648/J.JDMP.20241001.12</li>
+<li>Riley, A. P. (2025). "Semi-synthesis in the exploration of opioid-targeting natural products," <em>Natural Product Reports</em>, vol. 42, no. 10, pp. 1664–1675. [Online]. Available: https://doi.org/10.1039/D5NP00029G</li>
+<li>Sun, S., Yu, Y., Jo, Y., Han, J. H., Xue, Y., Cho, M., ... & Zhuang, S. (2025). "Impact of extraction techniques on phytochemical composition and bioactivity of natural product mixtures," <em>Frontiers in Pharmacology</em>, vol. 16, p. 1615338. [Online]. Available: https://doi.org/10.3389/FPHAR.2025.1615338/FULL</li>
+<li>Usmani, L., Shakil, A., Khan, I., Alvi, T., Singh, S., & Das, D. (2025). "Brassinosteroids in Micronutrient Homeostasis: Mechanisms and Implications for Plant Nutrition and Stress Resilience," <em>Plants</em>, vol. 14, no. 4. [Online]. Available: https://doi.org/10.3390/PLANTS14040598</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- article-display-area end -->
+        </main>
+        <!-- footer-area-start -->
+        <footer>
+            <div class="footer-top-area black-bg pt-40">
+                <div class="container">
+                    <div class="footer-middle-area mt-30 pb-30 pt-60">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">About IJARERS</h3>
+                                    <div class="footer-text">
+                                        <p>International Journal of Advanced Research in Engineering and Related Sciences (IJARERS) is a peer-reviewed open access journal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Quick Links</h3>
+                                    <div class="footer-text">
+                                        <ul>
+                                            <li><a href="../about-us.html">About Us</a></li>
+                                            <li><a href="../editorial-board.html">Editorial Board</a></li>
+                                            <li><a href="../submit-your-paper.html">Submit Paper</a></li>
+                                            <li><a href="../contact-us.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Issues</h3>
+                                    <div class="footer-text">
+                                        <ul>
+                                            <li><a href="../current-issues.html">Current Issues</a></li>
+                                            <li><a href="../past-issues.html">Past Issues</a></li>
+                                            <li><a href="../issues/vol2iss1.html">Volume 2, Issue 1</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Contact Info</h3>
+                                    <div class="footer-text">
+                                        <p>Email: editor@IJARERS.com</p>
+                                        <p>Website: IJARERS.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-area black-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="footer-bottom-content text-center">
+                                <p>&copy; 2026 IJARERS. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-area-end -->
+        <!-- JS here -->
+        <script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/owl.carousel.min.js"></script>
+        <script src="../assets/js/slick.min.js"></script>
+        <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="../assets/js/waypoints.min.js"></script>
+        <script src="../assets/js/jquery.counterup.min.js"></script>
+        <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="../assets/js/isotope.pkgd.min.js"></script>
+        <script src="../assets/js/jquery.appear.js"></script>
+        <script src="../assets/js/jquery.knob.js"></script>
+        <script src="../assets/js/wow.min.js"></script>
+        <script src="../assets/js/ajax-form.js"></script>
+        <script src="../assets/js/jquery.scrollUp.min.js"></script>
+        <script src="../assets/js/jquery.meanmenu.min.js"></script>
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <!-- Citation Copy Functionality -->
+        <style>
+            .copy-btn {
+                font-size: 12px;
+                padding: 4px 8px;
+                border-radius: 3px;
+            }
+            .copy-btn:hover {
+                background-color: #007bff;
+                color: white;
+            }
+            .citation-text {
+                background: white;
+                padding: 10px;
+                border-radius: 3px;
+                border: 1px solid #e9ecef;
+                margin: 0;
+            }
+            .copy-success {
+                background-color: #28a745 !important;
+                color: white !important;
+            }
+        </style>
+        <script>
+            function copyCitation(elementId) {
+                const citationElement = document.getElementById(elementId);
+                const button = event.target.closest('.copy-btn');
+                const textToCopy = citationElement.textContent || citationElement.innerText;
+                navigator.clipboard.writeText(textToCopy).then(function() {
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    button.classList.add('copy-success');
+                    setTimeout(function() {
+                        button.innerHTML = originalText;
+                        button.classList.remove('copy-success');
+                    }, 2000);
+                }).catch(function(err) {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    button.classList.add('copy-success');
+                    setTimeout(function() {
+                        button.innerHTML = originalText;
+                        button.classList.remove('copy-success');
+                    }, 2000);
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Development of a Patient-Specific Finite Element Model of the Human Lumbar Vertebra for Artificial Disc Design - IJARERS</title>
+        <meta name="description" content="This study presents a methodology to create a patient-specific FE model of the L5 lumbar vertebra using medical digital imaging. CT data were utilized to reconstruct the geometry, generate a volume mesh, and assign heterogeneous material properties based on Hounsfield Units.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Google Scholar Meta Tags -->
+        <meta name="citation_title" content="Development of a Patient-Specific Finite Element Model of the Human Lumbar Vertebra for Artificial Disc Design">
+        <meta name="citation_author" content="Hend A Mostafa">
+        <meta name="citation_author" content="Osama AM Abdelaal">
+        <meta name="citation_author" content="Wael M Khier">
+        <meta name="citation_author" content="AA Khalil Jane Doe">
+        <meta name="citation_journal_title" content="International Journal of Advanced Research in Engineering and Related Sciences">
+        <meta name="citation_journal_abbrev" content="IJARERS">
+        <meta name="citation_issn" content="2278-909X">
+        <meta name="citation_volume" content="1">
+        <meta name="citation_issue" content="9">
+        <meta name="citation_firstpage" content="1">
+        <meta name="citation_lastpage" content="9">
+    <meta name="citation_publication_date" content="2025/12/15">
+        <meta name="citation_publisher" content="IJARERS">
+        <meta name="citation_abstract_html_url" content="https://ijarers.com/article/ijarers9001.html">
+        <meta name="citation_language" content="en">
+        <meta name="citation_keywords" content="Patient-Specific Modeling, Finite Element Analysis, Lumbar Spine, CT-Based Material Assignment, Artificial Disc Replacement">
+        <!-- Dublin Core Meta Tags -->
+        <meta name="DC.Title" content="Development of a Patient-Specific Finite Element Model of the Human Lumbar Vertebra for Artificial Disc Design">
+        <meta name="DC.Creator" content="Hend A Mostafa">
+        <meta name="DC.Creator" content="Osama AM Abdelaal">
+        <meta name="DC.Creator" content="Wael M Khier">
+        <meta name="DC.Creator" content="AA Khalil Jane Doe">
+        <meta name="DC.Subject" content="Patient-Specific Modeling, Finite Element Analysis, Lumbar Spine, CT-Based Material Assignment, Artificial Disc Replacement">
+        <meta name="DC.Description" content="This study presents a methodology to create a patient-specific FE model of the L5 lumbar vertebra using medical digital imaging. CT data were utilized to reconstruct the geometry, generate a volume mesh, and assign heterogeneous material properties based on Hounsfield Units.">
+        <meta name="DC.Publisher" content="International Journal of Advanced Research in Engineering and Related Sciences">
+    <meta name="DC.Date" content="2025-12-15">
+        <meta name="DC.Type" content="Text">
+        <meta name="DC.Format" content="text/html">
+        <meta name="DC.Identifier" content="https://ijarers.com/article/ijarers9001.html">
+        <meta name="DC.Language" content="en">
+        <meta name="DC.Rights" content="Copyright 2025 IJARERS">
+        <!-- Additional SEO Meta Tags -->
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow">
+        <meta name="author" content="Hend A Mostafa, Osama AM Abdelaal, Wael M Khier, AA Khalil Jane Doe">
+        <meta property="og:title" content="Development of a Patient-Specific Finite Element Model of the Human Lumbar Vertebra for Artificial Disc Design">
+        <meta property="og:description" content="This study presents a methodology to create a patient-specific FE model of the L5 lumbar vertebra using medical digital imaging. CT data were utilized to reconstruct the geometry, generate a volume mesh, and assign heterogeneous material properties based on Hounsfield Units.">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://ijarers.com/article/ijarers9001.html">
+    <meta property="article:published_time" content="2025-12-15">
+        <meta property="article:section" content="Research Article">
+        <link rel="manifest" href="../site.webmanifest">
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../assets/css/animate.min.css">
+        <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="../assets/css/themify-icons.css">
+        <link rel="stylesheet" href="../assets/css/meanmenu.css">
+        <link rel="stylesheet" href="../assets/css/slick.css">
+        <link rel="stylesheet" href="../assets/css/default.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/responsive.css">
+        <link rel="stylesheet" href="../assets/css/custom.css">
+    </head>
+    <body>
+        <!-- header-start -->
+        <header class="header-transparent">
+            <div id="sticky-header" class="main-menu-area menu-bg pr-85">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3 col-4">
+                            <div class="logo logo-bg">
+                                <a href="../index.html"><img src="../assets/img/logo.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6 d-none d-lg-block">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="../index.html">Home</a></li>
+                                        <li><a href="../about-us.html">About Us</a></li>
+                                        <li><a href="../editorial-board.html">Editorial Board</a></li>
+                                        <li><a href="../submit-your-paper.html">Submit Your Paper</a></li>
+                                         <li><a href="../abstract.html">Indexing</a></li>
+                                        <li class="active"><a href="#">Issues <i class="fas fa-plus"></i></a>
+                                            <ul class="sub-menu text-left">
+                                                <li><a href="../current-issues.html">Current Issue</a></li>
+                                                <li><a href="../past-issues.html">Past Issues</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="../contact-us.html">contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-8">
+                            <div class="header-right f-left">
+                                <a href="mailto:editor@ijarers.com">
+                                    <div class="header-icon mr-15 f-left">
+                                        <i class=""></i>
+                                    </div>
+                                    <div class="header-info">
+                                        <span>Email Us</span>
+                                        <h5>editor@ijarers.com</h5>
+                                    </div>
+                               </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <main>
+            <!-- hero-area start -->
+            <div style="height:50px; background:#fff;"></div>
+            <!-- hero-area end -->
+            <!-- article-display-area start -->
+            <div class="article-display-area pt-80 pb-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="article-content">
+                                <!-- Article Header -->
+                                <div class="article-header mb-40">
+                                    <div class="article-meta mb-20">
+                                        <span class="article-type">Research Article</span>
+                                        <span class="article-date">Published: December 15, 2025</span>
+                                        <span class="article-volume">Volume 1, Issue 9</span>
+                                    </div>
+                                    <h2 class="article-title">Development of a Patient-Specific Finite Element Model of the Human Lumbar Vertebra for Artificial Disc Design</h2>
+                                </div>
+                                <!-- Authors and Affiliations -->
+                                <div class="authors-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Authors</h3>
+                                    </div>
+                                    <div class="authors-list">
+                                        <div class="author-item mb-20">
+                                            <h6>Hend A Mostafa<sup>1</sup></h6>
+                                            <p><strong>Affiliation:</strong> Faculty of Engineering, Assiut University, Assiut, Egypt.</p>
+                                        </div>
+                                        <div class="author-item mb-20">
+                                            <h6>Osama AM Abdelaal<sup>2</sup></h6>
+                                            <p><strong>Affiliation:</strong> Faculty of Engineering, Assiut University, Assiut, Egypt.</p>
+                                        </div>
+                                        <div class="author-item mb-20">
+                                            <h6>Wael M Khier<sup>3</sup></h6>
+                                            <p><strong>Affiliation:</strong> Faculty of Engineering, Assiut University, Assiut, Egypt.</p>
+                                        </div>
+                                        <div class="author-item mb-20">
+                                            <h6>AA Khalil Jane Doe<sup>4</sup></h6>
+                                            <p><strong>Affiliation:</strong> Faculty of Engineering, Assiut University, Assiut, Egypt.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Abstract Section -->
+                                <div class="abstract-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Abstract</h3>
+                                    </div>
+                                    <div class="abstract-content">
+                                        <p>Degenerative disc disease (DDD) is a leading cause of low-back pain. While artificial disc replacement offers an alternative to spinal fusion, complications often arise due to geometrical mismatches between the implant and the vertebral endplates. Furthermore, vertebral bone properties and geometry vary significantly based on age, sex, and conditions such as osteoporosis. Finite Element (FE) simulation provides an effective method to analyze these variations and facilitate the design of custom implants.<br>
+This study presents a methodology to create a patient-specific FE model of the L5 lumbar vertebra using medical digital imaging. Computed Tomography (CT) data were utilized to reconstruct the geometry, generate a volume mesh, and assign heterogeneous material properties based on Hounsfield Units. To validate the methodology, a finite element analysis of the model was performed under physiological loading conditions. The resulting stress, strain, and total deformation distributions were evaluated against previous literature, confirming the model's accuracy for use in pre-clinical implant design.</p>
+                                    </div>
+                                </div>
+                                <!-- Keywords Section -->
+                                <div class="keywords-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Keywords</h3>
+                                    </div>
+                                    <div class="keywords-content">
+                                        <span class="keyword-tag">Patient-Specific Modeling</span>
+                                        <span class="keyword-tag">Finite Element Analysis</span>
+                                        <span class="keyword-tag">Lumbar Spine</span>
+                                        <span class="keyword-tag">CT-Based Material Assignment</span>
+                                        <span class="keyword-tag">Artificial Disc Replacement</span>
+                                    </div>
+                                </div>
+                                <!-- Downloads Section -->
+                                <div class="results-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>Downloads</h3>
+                                    </div>
+                                    <div class="results-content">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
+                                                <div class="result-image-box">
+                                                    <a href="../IJARERS_ARCHIVE/1i9.pdf" target="_blank" class="btn btn-primary">
+                                                        <i class="fas fa-download"></i> Download Full Paper (PDF)
+                                                    </a>
+                                                    <div class="image-caption mt-20">
+                                                        <h4>Full Research Paper</h4>
+                                                        <p>Complete research article with detailed methodology, results, and references.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Citation Section -->
+                                <div class="references-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>How to Cite</h3>
+                                    </div>
+                                    <div class="references-content">
+                                        <div class="citation-box p-20" style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+                                            <div class="citation-item mb-20">
+                                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                                    <p class="mb-0"><strong>APA Style:</strong></p>
+                                                    <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCitation('apa-citation')" title="Copy APA Citation">
+                                                        <i class="fas fa-copy"></i> Copy
+                                                    </button>
+                                                </div>
+                                                <p id="apa-citation" class="citation-text">Mostafa, H.A., Abdelaal, O.A.M., Khier, W.M., & Doe, A.K.J. (2025). Development of a patient-specific finite element model of the human lumbar vertebra for artificial disc design. <em>International Journal of Advanced Research in Engineering and Related Sciences</em>, <em>1</em>(9), 1-9.</p>
+                                            </div>
+                                            <div class="citation-item">
+                                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                                    <p class="mb-0"><strong>IEEE Style:</strong></p>
+                                                    <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCitation('ieee-citation')" title="Copy IEEE Citation">
+                                                        <i class="fas fa-copy"></i> Copy
+                                                    </button>
+                                                </div>
+                                                <p id="ieee-citation" class="citation-text">H.A. Mostafa, O.A.M. Abdelaal, W.M. Khier, and A.K.J. Doe, "Development of a patient-specific finite element model of the human lumbar vertebra for artificial disc design," <em>International Journal of Advanced Research in Engineering and Related Sciences</em>, vol. 1, no. 9, pp. 1-9, 2025.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- References Section -->
+                                <div class="references-section mb-40">
+                                    <div class="section-title mb-30">
+                                        <h3>References</h3>
+                                    </div>
+                                    <div class="references-content">
+                                        <ol class="references-list">
+<li>CS Aparna, RP Tewari and AK Govil, Biomechanical Analysis of a Three Dimensional Finite Element Model, International Journal of Mechanical Engineering and Robotics, 2013, 1(2), 149-152.</li>
+<li>Caroline Sköld, Hans Tropp, Svante Berg, Five-Year Follow-Up of Total Disc Replacement Compared to Fusion: A Randomized Controlled Trial, European Spine Journal, 2013, 22(10), 2288-2295.</li>
+<li>André van Ooij, F Cumhur Oner and Ab J Verbout, Complications of Artificial Disc Replacement: A Report of 27 Patients with the SB Charité Disc, Journal of Spinal Disorders & Techniques, 2003, 16 (4), 369–383.</li>
+<li>Neal de Beer, André van der Merwe, Patient-Specific Intervertebral Disc Implants Using Rapid Manufacturing Technology, Rapid Prototyping Journal, 2013, 19 (2), 126-139.</li>
+<li>MC Ho Ba Tho, Patient Specific Bone and Joints Modeling and Tissue Characterization Derived from Medical Images, WIT Transactions on State of the Art in Science and Engineering, 2005, 19, 63–79.</li>
+<li>I Leichter, A Weinreb, GC Robin and R Steinberg, The Effect of Age and Sex on Bone Density, Bone Mineral Content and Cortical Index, Clinical Orthopaedics and Related Research, 1981, 156, 232–239.</li>
+<li>M Kurutz, Finite Element Modelling of Human Lumbar Spine, Finite Element Analysis [David Moratal (Ed.)], 2010, 1987, 210–236.</li>
+<li>C Hellmich, C Kober and B Erdmann, Micromechanics-Based Conversion of CT Data into Anisotropic Elasticity Tensors, Applied to FE Simulations of a Mandible, Annals of Biomedical Engineering, 2008, 36 (1), 108–122.</li>
+<li>S Kazembakhshi and Y Luo, Constructing Anisotropic Finite Element Model of Bone from Computed Tomography (CT), Bio-Medical Materials and Engineering, 2014, 24 (6), 2619–2626.</li>
+<li>Materialise Software Help.</li>
+<li>JJ Schreiber, PA Anderson, HG Rosas, AL Buchholz and AG Au, Hounsfield Units for Assessing Bone Mineral Density and Strength: A Tool for Osteoporosis Management, J. Bone Joint Surg. Am. [The Journal Of Bone And Joint Surgery], 2011, 93(11), 1057–1063.</li>
+<li>JD Jovanovic and LJ Miomir, Finite Element Modeling of the Vertebra with Geometry and Material Properties Retrieved from CT-Scan Data, Facta Universitatis, Mechanical Engineering, 2010, 8(1), 19–26.</li>
+<li>Rho JY, Hobatho MC, Ashman RB, Relations of Mechanical Properties to Density and CT Numbers In Human Bone, Medical Engineering & Physics, 1995, 17(5), 347-355.</li>
+<li>JY Rho, MC Hobatho and RB Ashman, Relations of Mechanical Properties to Density and CT Numbers in Human Bone, Medical Engineering & Physics, 1995, 17(5), 347–355.</li>
+<li>KS Han, A Rohlmann, T Zander and WR Taylor, Lumbar Spinal Loads Vary with Body Height and Weight, Medical Engineering & Physics, 2013, 35(7), 969–977.</li>
+<li>C Lai, J Wang, G Chang and C Chung, The Load Sharing Contribution of Spinal Facet Joint During Impact Loading – A Porcine Biomechanical Model Cheng-Chuan, IMECE2003-42940, 2003, 1, 3–4.</li>
+<li>HQ Nguyen, TT Dao, A Rassineux and MC Ho Ba Tho, Material-Driven Mesh of the Lumbar Spine Derived from CT Data, Computer Methods in Biomechanics and Biomedical Engineering: Imaging & Visualization, 2016, 1163 (6), 1–9.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- article-display-area end -->
+        </main>
+        <!-- footer-area-start -->
+        <footer>
+            <div class="footer-top-area black-bg pt-40">
+                <div class="container">
+                    <div class="footer-middle-area mt-30 pb-30 pt-60">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">About IJARERS</h3>
+                                    <div class="footer-text">
+                                        <p>International Journal of Advanced Research in Engineering and Related Sciences (IJARERS) is a peer-reviewed open access journal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Quick Links</h3>
+                                    <div class="footer-text">
+                                        <ul>
+                                            <li><a href="../about-us.html">About Us</a></li>
+                                            <li><a href="../editorial-board.html">Editorial Board</a></li>
+                                            <li><a href="../submit-your-paper.html">Submit Paper</a></li>
+                                            <li><a href="../contact-us.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Issues</h3>
+                                    <div class="footer-text">
+                                        <ul>
+                                            <li><a href="../current-issues.html">Current Issues</a></li>
+                                            <li><a href="../past-issues.html">Past Issues</a></li>
+                                            <li><a href="../issues/vol1iss9.html">Volume 1, Issue 9</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-wrapper mb-0">
+                                    <h3 class="footer-title">Contact Info</h3>
+                                    <div class="footer-text">
+                                        <p>Email: editor@IJARERS.com</p>
+                                        <p>Website: IJARERS.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-area black-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="footer-bottom-content text-center">
+                                <p>&copy; 2025 IJARERS. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-area-end -->
+        <!-- JS here -->
+        <script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/owl.carousel.min.js"></script>
+        <script src="../assets/js/slick.min.js"></script>
+        <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="../assets/js/waypoints.min.js"></script>
+        <script src="../assets/js/jquery.counterup.min.js"></script>
+        <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="../assets/js/isotope.pkgd.min.js"></script>
+        <script src="../assets/js/jquery.appear.js"></script>
+        <script src="../assets/js/jquery.knob.js"></script>
+        <script src="../assets/js/wow.min.js"></script>
+        <script src="../assets/js/ajax-form.js"></script>
+        <script src="../assets/js/jquery.scrollUp.min.js"></script>
+        <script src="../assets/js/jquery.meanmenu.min.js"></script>
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <!-- Citation Copy Functionality -->
+        <style>
+            .copy-btn {
+                font-size: 12px;
+                padding: 4px 8px;
+                border-radius: 3px;
+            }
+            .copy-btn:hover {
+                background-color: #007bff;
+                color: white;
+            }
+            .citation-text {
+                background: white;
+                padding: 10px;
+                border-radius: 3px;
+                border: 1px solid #e9ecef;
+                margin: 0;
+            }
+            .copy-success {
+                background-color: #28a745 !important;
+                color: white !important;
+            }
+        </style>
+        <script>
+            function copyCitation(elementId) {
+                const citationElement = document.getElementById(elementId);
+                const button = event.target.closest('.copy-btn');
+                const textToCopy = citationElement.textContent || citationElement.innerText;
+                navigator.clipboard.writeText(textToCopy).then(function() {
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    button.classList.add('copy-success');
+                    setTimeout(function() {
+                        button.innerHTML = originalText;
+                        button.classList.remove('copy-success');
+                    }, 2000);
+                }).catch(function(err) {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    button.classList.add('copy-success');
+                    setTimeout(function() {
+                        button.innerHTML = originalText;
+                        button.classList.remove('copy-success');
+                    }, 2000);
+                });
+            }
+        </script>
+    </body>
+</html>
